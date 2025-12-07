@@ -38,7 +38,7 @@ export default defineConfig({
     ['meta', { property: 'og:url', content: 'https://starneko.com' }],
     ['meta', { property: 'og:image', content: '/img/Milk.jpg' }],
     ['meta', { property: 'og:site_name', content: '牛奶猫的猎人笔记' }],
-    ['meta', { property: 'og:description', content: 'System Security Hunter. Freelancer. Daily Py/Go/Rust. | MSCS at CU Boulder 🎓 | maimaiDX ◂Ⓘ▸ ヨルシカ | INFJ' }],
+    ['meta', { property: 'og:description', content: 'System Security Hunter. Freelancer. Python/Go/Rust. | MSCS at CU Boulder | maimaiDX ◂Ⓘ▸ ヨルシカ | INFJ' }],
   ],
 
   themeConfig: {
