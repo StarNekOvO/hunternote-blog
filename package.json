@@ -1,0 +1,17 @@
+{
+  "name": "vitepress-blog",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "keywords": [],
+  "author": "StarNekOvO",
+  "license": "ISC",
+  "description": "VitePress blog migrated from Hexo",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
