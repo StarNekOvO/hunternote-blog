@@ -14,7 +14,13 @@ function getSidebar() {
       link: '/ctfs/',
       items: [
         { text: 'BUU CTF', link: '/ctfs/buuctf/' },
-        { text: 'CTFshow', link: '/ctfs/ctfshow/' },
+        { 
+          text: 'CTFshow', 
+          link: '/ctfs/ctfshow/',
+          items: [
+            { text: 'PWN VIP 360', link: '/ctfs/ctfshow/pwnvip360/' }
+          ]
+        },
         { text: 'NSSCTF', link: '/ctfs/nssctf/' }
       ]
     },
