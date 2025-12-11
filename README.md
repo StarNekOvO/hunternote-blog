@@ -27,7 +27,7 @@ hunternote-blog/
 │   │   ├── htb-lab/        # HTB Lab
 │   │   ├── pwn-college/    # pwn.college
 │   │   └── index.md        # Labs 平台总览
-│   ├── friends/            # 友链页面
+│   ├── links/              # 友情链接页面
 │   │   └── index.md
 │   ├── sitemap/            # 网站地图页面
 │   │   └── index.md
@@ -127,5 +127,5 @@ npm run preview
 - 在 `docs/.vitepress/config.ts` 的 `head` 中引入
 
 ### 友链管理
-编辑 `docs/friends/index.md`，按照现有格式添加友链信息。
+编辑 `docs/links/index.md`，按照现有格式添加友情链接信息。
 
