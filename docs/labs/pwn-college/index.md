@@ -15,5 +15,9 @@
 
 ## 目录
 
-- [lv1（白腰带）](/labs/pwn-college/lv1/)
+- [lv1（白色腰带）](/labs/pwn-college/lv1/)
+- [lv2（橙色腰带）](/labs/pwn-college/lv2/)
+- [lv3（黄色腰带）](/labs/pwn-college/lv3/)
+- [lv4（绿色腰带）](/labs/pwn-college/lv4/)
+- [lv5（蓝色腰带）](/labs/pwn-college/lv5/)
 

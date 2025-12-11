@@ -25,6 +25,9 @@
   - [HTB Academy](/labs/htb-academy/)
   - [HTB Lab](/labs/htb-lab/)
   - [pwn.college](/labs/pwn-college/)
+    - [Linux Luminarium](/labs/pwn-college/linux-luminarium/)
+    - [Computing 101](/labs/pwn-college/computing-101/)
+    - [Playing With Programs](/labs/pwn-college/playing-with-programs/)
     - [lv1 白腰带挑战](/labs/pwn-college/lv1/)
     - [lv2 橙色腰带挑战](/labs/pwn-college/lv2/)
     - [lv3 黄色腰带挑战](/labs/pwn-college/lv3/)
@@ -39,7 +42,7 @@
 
 ## 站点统计
 
-- **总页面数**：18 个主要页面
+- **总页面数**：21 个主要页面
 - **内容分类**：CVEs、CTFs、Labs
 - **更新频率**：持续更新中
 

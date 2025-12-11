@@ -35,6 +35,9 @@ function getSidebar() {
           text: 'pwn.college',
           link: '/labs/pwn-college/',
           items: [
+            { text: 'Linux Luminarium', link: '/labs/pwn-college/linux-luminarium/' },
+            { text: 'Computing 101', link: '/labs/pwn-college/computing-101/' },
+            { text: 'Playing With Programs', link: '/labs/pwn-college/playing-with-programs/' },
             { text: 'lv1 白色腰带', link: '/labs/pwn-college/lv1/' },
             { text: 'lv2 橙色腰带', link: '/labs/pwn-college/lv2/' },
             { text: 'lv3 黄色腰带', link: '/labs/pwn-college/lv3/' },

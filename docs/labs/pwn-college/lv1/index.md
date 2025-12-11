@@ -1,6 +1,6 @@
-# pwn.college lv1（白色腰带）
+# pwn.college lv1（白色腰带）Start Here
 
-白腰带挑战其实并不算挑战，就是熟悉一下 pwn.college 这个平台的基础操作。
+白色腰带挑战其实并不算挑战，就是熟悉一下 pwn.college 这个平台的基础操作。
 
 平台支持多种连接方式，WebSSH、WebVSCode、WebVNC，还有直接SSH都行，随便选一个顺手的用就好了。
 
