@@ -31,7 +31,13 @@ function getSidebar() {
       items: [
         { text: 'HTB Academy', link: '/labs/htb-academy/' },
         { text: 'HTB Lab', link: '/labs/htb-lab/' },
-        { text: 'pwn.college', link: '/labs/pwn-college/' }
+        {
+          text: 'pwn.college',
+          link: '/labs/pwn-college/',
+          items: [
+            { text: 'lv1', link: '/labs/pwn-college/lv1/' }
+          ]
+        }
       ]
     }
   ]
