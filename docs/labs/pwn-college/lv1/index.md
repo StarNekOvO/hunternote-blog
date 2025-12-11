@@ -1,4 +1,6 @@
-# pwn.college lv1（白色腰带）Start Here
+# pwn.college lv1（白色腰带）Start Here <img src="https://pwn.college/belt/white.svg" style="height: 1em; vertical-align: middle;">
+
+## 白色腰带简介
 
 白色腰带挑战其实并不算挑战，就是熟悉一下 pwn.college 这个平台的基础操作。
 

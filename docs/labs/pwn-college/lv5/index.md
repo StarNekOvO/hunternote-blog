@@ -1,4 +1,5 @@
-# pwn.college lv5（蓝色腰带）Software Exploitation
+# pwn.college lv5（蓝色腰带）Software Exploitation <img src="https://pwn.college/belt/blue.svg" style="height: 1em; vertical-align: middle;">
+
 
 蓝色：更"CTF 味"的综合题 / 高级主题
 

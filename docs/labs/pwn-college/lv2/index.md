@@ -1,4 +1,4 @@
-# pwn.college lv2（橙色腰带）Intro to Cybersecurity
+# pwn.college lv2（橙色腰带）Intro to Cybersecurity <img src="https://pwn.college/belt/orange.svg" style="height: 1em; vertical-align: middle;">
 
 橙色腰带：基础 pwn / 逆向 + 利用入门
 

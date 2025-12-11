@@ -1,4 +1,4 @@
-# pwn.college lv3（黄色腰带）Program Security
+# pwn.college lv3（黄色腰带）Program Security <img src="https://pwn.college/belt/yellow.svg" style="height: 1em; vertical-align: middle;">
 
 黄色：更复杂的保护 & 漏洞类型
 
