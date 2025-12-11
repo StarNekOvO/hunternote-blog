@@ -90,7 +90,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Notes', link: '/cves/' },
-      { text: 'Friends', link: '/friends/' },
+      { text: 'Links', link: '/links/' },
       { text: 'whoami', link: '/whoami/' },
     ],
 
@@ -115,7 +115,7 @@ export default defineConfig({
       '/ctfs/': getSidebar(),
       '/labs/': getSidebar(),
       '/whoami/': [],
-      '/friends/': [],
+      '/links/': [],
       '/sitemap/': []
     },
 

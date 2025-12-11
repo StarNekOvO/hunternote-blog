@@ -1,4 +1,4 @@
-# 友链
+# Links
 
 ## Friends
 
