@@ -15,6 +15,7 @@ function getSidebar() {
             { 
               text: 'PWN VIP 360', 
               link: '/ctfs/ctfshow/pwnvip360/',
+              collapsed: false,
               items: [
                 { text: '前置基础 (0-34)', link: '/ctfs/ctfshow/pwnvip360/01-fundamentals' },
                 { text: '栈溢出与ROP (35-80)', link: '/ctfs/ctfshow/pwnvip360/02-stack-overflow' },
@@ -48,6 +49,7 @@ function getSidebar() {
         { text: 'HTB Lab', link: '/labs/htb-lab/' },
         {
           text: 'pwn.college',
+          collapsed: false,
           link: '/labs/pwn-college/',
           items: [
             { text: 'Linux Luminarium 🐧', link: '/labs/pwn-college/linux-luminarium/' },
