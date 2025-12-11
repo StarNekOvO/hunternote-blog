@@ -37,6 +37,66 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/01-fundamentals</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/02-stack-overflow</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/03-format-string</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/04-integer-security</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/05-bypass-protection</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/06-heap-exploitation</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/07-exploitation-tricks</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/08-other-vulnerabilities</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/09-cross-architecture</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/10-kernel-pwn</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://starneko.com/ctfs/nssctf/</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>

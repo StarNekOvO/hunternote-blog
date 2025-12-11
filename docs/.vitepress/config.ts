@@ -14,11 +14,26 @@ function getSidebar() {
       link: '/ctfs/',
       items: [
         { text: 'BUU CTF', link: '/ctfs/buuctf/' },
-        { 
-          text: 'CTFshow', 
+        {
+          text: 'CTFshow',
           link: '/ctfs/ctfshow/',
           items: [
-            { text: 'PWN VIP 360', link: '/ctfs/ctfshow/pwnvip360/' }
+            { 
+              text: 'PWN VIP 360', 
+              link: '/ctfs/ctfshow/pwnvip360/',
+              items: [
+                { text: '前置基础 (0-34)', link: '/ctfs/ctfshow/pwnvip360/01-fundamentals' },
+                { text: '栈溢出与ROP (35-80)', link: '/ctfs/ctfshow/pwnvip360/02-stack-overflow' },
+                { text: '格式化字符串漏洞 (91-100)', link: '/ctfs/ctfshow/pwnvip360/03-format-string' },
+                { text: '整数安全 (101-110)', link: '/ctfs/ctfshow/pwnvip360/04-integer-security' },
+                { text: 'Bypass安全机制 (111-134)', link: '/ctfs/ctfshow/pwnvip360/05-bypass-protection' },
+                { text: '堆利用 (135-305)', link: '/ctfs/ctfshow/pwnvip360/06-heap-exploitation' },
+                { text: 'PWN利用技巧 (306-324)', link: '/ctfs/ctfshow/pwnvip360/07-exploitation-tricks' },
+                { text: '其他漏洞利用 (325-330)', link: '/ctfs/ctfshow/pwnvip360/08-other-vulnerabilities' },
+                { text: '异构PWN (331-355)', link: '/ctfs/ctfshow/pwnvip360/09-cross-architecture' },
+                { text: '内核PWN (356-360)', link: '/ctfs/ctfshow/pwnvip360/10-kernel-pwn' }
+              ]
+            }
           ]
         },
         { text: 'NSSCTF', link: '/ctfs/nssctf/' }
