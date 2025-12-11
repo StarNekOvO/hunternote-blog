@@ -1,8 +1,6 @@
-# CTFshow PWN VIP 360
+# PWNVIP360
 
 这是 CTFshow 平台的 PWN 付费大会员课程，共有 360 个靶场，系统化地覆盖了从基础到高级的二进制安全知识。
-
-这里将记录 CTFshow PWN VIP 360 的学习笔记与 Writeup。
 
 ## 课程结构
 
