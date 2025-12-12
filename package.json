@@ -1,5 +1,5 @@
 {
-  "name": "vitepress-blog",
+  "name": "hunternote",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -7,10 +7,10 @@
     "build": "vitepress build docs",
     "preview": "vitepress preview docs"
   },
-  "keywords": [],
+  "keywords": ["security", "ctf", "pwn", "writeup", "vitepress"],
   "author": "StarNekOvO",
-  "license": "ISC",
-  "description": "VitePress blog migrated from Hexo",
+  "license": "CC-BY-NC-4.0",
+  "description": "牛奶猫的猎人笔记 - 系统安全研究学习笔记与 Writeup",
   "devDependencies": {
     "vitepress": "^1.6.4"
   }
