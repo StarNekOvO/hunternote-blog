@@ -2,189 +2,217 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://starneko.com/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://starneko.com/cves/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <loc>https://starneko.com/notes/</loc>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://starneko.com/notes/android-internals/</loc>
+    <lastmod>2025-12-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/notes/android-architecture/</loc>
+    <lastmod>2025-12-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://starneko.com/cves/</loc>
+    <lastmod>2025-12-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://starneko.com/ctfs/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://starneko.com/ctfs/buuctf/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://starneko.com/ctfs/ctfshow/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/01-fundamentals</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/02-stack-overflow</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/03-format-string</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/04-integer-security</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/05-bypass-protection</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/06-heap-exploitation</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/07-exploitation-tricks</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/08-other-vulnerabilities</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/09-cross-architecture</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/ctfs/ctfshow/pwnvip360/10-kernel-pwn</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/ctfs/nssctf/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://starneko.com/labs/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://starneko.com/labs/htb-academy/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://starneko.com/labs/htb-lab/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://starneko.com/labs/pwn-college/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://starneko.com/labs/pwn-college/linux-luminarium/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/labs/pwn-college/computing-101/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/labs/pwn-college/playing-with-programs/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/labs/pwn-college/lv1/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/labs/pwn-college/lv2/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/labs/pwn-college/lv3/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/labs/pwn-college/lv4/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/labs/pwn-college/lv5/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
     <loc>https://starneko.com/links/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/whoami/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://starneko.com/sitemap/</loc>
+    <lastmod>2025-12-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
 </urlset>
-
