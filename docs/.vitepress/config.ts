@@ -7,7 +7,14 @@ function getSidebar() {
       collapsed: false,
       link: '/notes/',
       items: [
-        { text: 'Android Internals', link: '/notes/android-internals/' }
+        {
+          text: 'Android Internals',
+          link: '/notes/android-internals/',
+          collapsed: false,
+          items: [
+            { text: '安卓架构演进：整体到模块化', link: '/notes/android-internals/android-evolution' }
+          ]
+        }
       ]
     },
     {

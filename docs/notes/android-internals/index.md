@@ -2,8 +2,6 @@
 
 Android 系统核心架构与底层运行机制分析, 从 Userland 到 Kernel 边界 (不包含 App 和 Linux Kernel)
 
-![Android](/img/Android.webp)
-
 ## Java Framework & System Services
 应用层与系统服务 (注: 逻辑漏洞、权限绕过)
 
