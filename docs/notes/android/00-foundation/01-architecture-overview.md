@@ -1,4 +1,4 @@
-# Android 架构演进：整体到模块化
+# 0x01 - Android 架构演进：整体到模块化
 
 梳理 Android 从早期“整体式”到“解耦/模块化”的关键拐点（ART/SELinux、Treble、Mainline/APEX、GKI），并结合典型漏洞事件说明：攻击面暴露 → 修复路径/分发机制 → 架构演进之间的关系。
 
@@ -89,15 +89,35 @@
 | 2016 | **QuadRooter** | `CVE-2016-2503` / `2504` / `2059` / `5340` | 高通驱动链路的一组高危漏洞集合，典型利用为本地提权/持久化（依赖具体设备与补丁状态）。 | 暴露供应链（SoC/驱动）漏洞对生态的长尾影响；仅更新 framework 无法覆盖驱动修复，推动 system/vendor 边界与更新责任更清晰。 |
 | 2017 | **Janus** | `CVE-2017-13156` | APK 注入攻击：在不破坏 v1（JAR）签名的情况下向 APK 追加恶意 DEX；影响 Android 5.1.1–8.0。 | 促使生态加速迁移到 APK Signature Scheme v2/v3（v2 覆盖整包完整性；v3 引入 key rotation），并推动旧设备修复包管理校验逻辑。 |
 
-### Android 8 (2017)：Project Treble - 系统与供应商的解耦
+### Android 10 (2019)：Project Mainline - 模块化更新的终极形态
 
-- **变革核心：引入稳定的供应商接口 (Vendor Interface)**
-    - **变动原因**：为了彻底解决 Android 系统更新缓慢的碎片化问题。Project Treble 将 Android OS 框架与特定于设备的底层代码（供应商实现）完全分离开。
-    - **影响**：系统被明确划分为 `system` 分区和 `vendor` 分区，两者之间通过一个标准化的 HAL 接口（HIDL）通信。这使得 Google 可以独立更新 Android 系统，而无需等待芯片或设备制造商的更新。
+- **变革核心：Google Play 系统更新 (APEX)**
+    - **变动原因**：即使有了 Treble，系统核心组件（如媒体框架、权限控制器）的更新仍依赖厂商。
+    - **影响**：引入了 `.apex` 文件格式，允许 Google 直接通过 Google Play 更新系统的核心组件（如 `com.android.runtime`、`com.android.media`）。这标志着 Google 彻底收回了关键安全组件的控制权。
 
-- **代表性安全漏洞**
+### Android 12 (2021)：GKI (Generic Kernel Image)
 
-| 年份 | 漏洞名称 | CVE | 描述 | 对架构演进的影响 |
+- **变革核心：内核与驱动的分离**
+    - **变动原因**：Android 内核碎片化极其严重，每个芯片组都有数千个补丁。
+    - **影响**：Google 强制要求使用统一的 GKI 内核，厂商驱动通过内核模块（LKM）加载。这使得内核漏洞的修复可以像应用更新一样快速分发。
+
+### Android 14-16 (2023-2025)：硬件辅助安全与虚拟化
+
+- **变革核心：AVF (Android Virtualization Framework) 与 MTE**
+    - **AVF**：引入 pKVM，将高敏感任务（如密钥管理、DRM）从主系统隔离到受保护的虚拟机中。
+    - **MTE (Memory Tagging Extension)**：硬件级内存安全检测，旨在从根源上终结 UAF 和 Buffer Overflow 等内存破坏漏洞。
+    - **ARM CCA (Android 16)**：引入 Realm 隔离，硬件强制的应用沙箱。
+
+---
+
+## 总结：攻击面的演进趋势
+
+从研究视角看，Android 的演进是一个**“收缩”**的过程：
+1.  **Framework 层**：由于 Mainline 的存在，逻辑漏洞（如 Janus）的生命周期被极大缩短。
+2.  **Native 层**：随着 Scudo 分配器和 MTE 的普及，传统堆利用难度指数级上升。
+3.  **Kernel 层**：GKI 使得内核补丁同步变快，研究重心转向 GPU/NPU 等 Vendor 驱动。
+4.  **新战场**：虚拟化边界（pKVM）、硬件安全（TEE/SE）以及 ART 虚拟机的复杂逻辑漏洞。
+
 | :--- | :--- | :--- | :--- | :--- |
 | 2017 | **BlueBorne** | `CVE-2017-0781` 等 | 蓝牙协议栈零点击高危漏洞集合（多平台受影响），可在无需配对情况下触发远程攻击。 | 暴露无线协议栈的高频高危攻击面；推动"关键组件应更快可更新"的方向共识（后续部分组件进入 Mainline，但连接性组件的模块化范围随版本变化）。 |
 

@@ -12,8 +12,15 @@
 
 ### Notes
 - [技术笔记](/notes/)
-  - [Android Internals](/notes/android-internals/)
-    - [Android 架构演进](/notes/android-internals/android-evolution)
+  - [Android Internals](/notes/android/)
+    - [0x00 环境搭建与导读](/notes/android/00-foundation/00-environment-setup)
+    - [0x01 架构与安全模型](/notes/android/00-foundation/01-architecture-overview)
+    - [Part 1: 沙箱综述](/notes/android/01-sandbox/)
+    - [1x00 UID/GID 隔离](/notes/android/01-sandbox/01-uid-gid-isolation)
+    - [1x01 Zygote 进程](/notes/android/01-sandbox/02-zygote-process)
+    - [1x02 权限模型](/notes/android/01-sandbox/03-permission-model)
+    - [1x03 存储隔离](/notes/android/01-sandbox/04-storage-isolation)
+    - [1x04 四大组件安全](/notes/android/01-sandbox/05-app-components)
 
 ### CTFs
 - [CTF 平台总览](/ctfs/)

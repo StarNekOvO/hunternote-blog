@@ -25,7 +25,7 @@ hunternote/
 │   │   └── pwn-college/
 │   ├── cves/               # CVE 漏洞复现
 │   ├── notes/              # 技术学习笔记
-│   │   └── android-internals/
+│   │   └── android/
 │   ├── links/              # 友情链接
 │   ├── sitemap/            # 网站地图
 │   └── whoami/             # 关于作者

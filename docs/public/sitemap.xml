@@ -14,14 +14,56 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android-internals/</loc>
-    <lastmod>2025-12-17</lastmod>
+    <loc>https://starneko.com/notes/android/</loc>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android-internals/android-evolution</loc>
-    <lastmod>2025-12-17</lastmod>
+    <loc>https://starneko.com/notes/android/00-foundation/00-environment-setup</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/notes/android/00-foundation/01-architecture-overview</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/notes/android/01-sandbox/</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/notes/android/01-sandbox/01-uid-gid-isolation</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/notes/android/01-sandbox/02-zygote-process</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/notes/android/01-sandbox/03-permission-model</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/notes/android/01-sandbox/04-storage-isolation</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://starneko.com/notes/android/01-sandbox/05-app-components</loc>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

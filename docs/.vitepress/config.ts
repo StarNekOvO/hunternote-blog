@@ -8,11 +8,30 @@ function getSidebar() {
       link: '/notes/',
       items: [
         {
-          text: 'Android Internals',
-          link: '/notes/android-internals/',
+          text: 'Android',
+          link: '/notes/android/',
           collapsed: false,
           items: [
-            { text: 'Android 架构演进', link: '/notes/android-internals/android-evolution' }
+            {
+              text: 'Part 0: Foundation',
+              collapsed: false,
+              items: [
+                { text: '0x00 环境', link: '/notes/android/00-foundation/00-environment-setup' },
+                { text: '0x01 架构演进', link: '/notes/android/00-foundation/01-architecture-overview' },
+              ]
+            },
+            {
+              text: 'Part 1: Application Sandbox',
+              collapsed: false,
+              items: [
+                { text: 'Overview', link: '/notes/android/01-sandbox/' },
+                { text: '1x00 UID/GID 隔离', link: '/notes/android/01-sandbox/01-uid-gid-isolation' },
+                { text: '1x01 Zygote 进程', link: '/notes/android/01-sandbox/02-zygote-process' },
+                { text: '1x02 权限模型', link: '/notes/android/01-sandbox/03-permission-model' },
+                { text: '1x03 存储隔离', link: '/notes/android/01-sandbox/04-storage-isolation' },
+                { text: '1x04 四大组件安全', link: '/notes/android/01-sandbox/05-app-components' },
+              ]
+            }
           ]
         }
       ]
