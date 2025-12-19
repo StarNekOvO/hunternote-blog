@@ -13,7 +13,7 @@ function getSidebar() {
           collapsed: false,
           items: [
             {
-              text: 'Part 0: Foundation',
+              text: '0 Foundation',
               collapsed: false,
               items: [
                 { text: '0x00 环境', link: '/notes/android/00-foundation/00-environment-setup' },
@@ -21,7 +21,7 @@ function getSidebar() {
               ]
             },
             {
-              text: 'Part 1: Application Sandbox',
+              text: '1 Sandbox',
               collapsed: false,
               items: [
                 { text: 'Overview', link: '/notes/android/01-sandbox/' },

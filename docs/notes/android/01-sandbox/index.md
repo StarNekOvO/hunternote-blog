@@ -1,4 +1,4 @@
-# Part 1: Application Sandbox (沙箱篇)
+# Part 1: Sandbox
 
 > "沙箱不是一个单一的组件，而是一套纵深防御（Defense in Depth）体系。"
 
