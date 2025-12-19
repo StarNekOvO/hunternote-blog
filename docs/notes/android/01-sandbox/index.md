@@ -54,7 +54,7 @@ graph TD
 - **内核漏洞**: 通过内核提权直接关闭 SELinux 或修改进程凭证。
 - **逻辑漏洞**: 利用 Framework 层的逻辑缺陷（如 Intent 重定向、PendingIntent 劫持）绕过权限检查。
 
-在接下来的章节中，我们将逐一揭开这些机制的神秘面纱。
+后续章节将详细分析这些防御机制的实现细节与绕过思路。
 
 ## 延伸阅读
 - [0x01 - Android 架构演进](../00-foundation/01-architecture-overview.md)

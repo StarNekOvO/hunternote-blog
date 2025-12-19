@@ -78,15 +78,29 @@ if (fs_prepare_dir_strict(path, 0751, uid, gid) != 0) {
 ### 4.3 修复
 Google 修复了 PMS 中关于 `sharedUserId` 签名校验的边界条件，并进一步收紧了对系统 UID 共享的限制。
 
-## 5. 总结
+## 5. 边界与局限性：为什么仅有 UID 隔离是不够的？
+
+虽然 UID/GID 提供了基础的隔离，但在复杂的 Android 环境中，它并非万能。
+
+### 5.1 Root 用户的特殊性
+在 Linux 传统权限模型中，UID 0 (root) 拥有最高权限，可以绕过所有的 DAC 检查。
+- **背景**: 许多系统守护进程（如 `vold`, `netd`）需要以 root 身份运行以执行底层操作。
+- **风险**: 一旦 root 进程被攻破，整个 DAC 隔离将形同虚设。
+- **结果**: Android 引入了 **SELinux (MAC)** 来限制 root 进程。即使是 root，也只能访问其安全策略（Policy）允许的资源。此外，通过 **Capabilities** 机制，系统可以只赋予进程必要的特权，而非完整的 root 权限。
+
+### 5.2 权限放宽的风险
+如果应用开发者错误地使用了 `chmod 777` 或 `Context.MODE_WORLD_READABLE`（已废弃），会发生什么？
+- **分析**: 虽然应用可以放宽其私有目录的 DAC 权限，但现代 Android 还有其他保护层。
+- **结果**: 
+    1. **父目录限制**: `/data/data` 目录通常对普通应用不可列出。
+    2. **SELinux 拦截**: 即使文件权限允许，SELinux 策略通常也会禁止一个应用进程访问另一个应用标签（Label）下的文件。
+    3. **API 限制**: 从 Android 7.0 开始，系统严禁通过 `FileUriExposedException` 传递私有文件，强制开发者使用 `FileProvider`。
+
+## 6. 总结
 
 UID/GID 隔离是 Android 沙箱的底层基石。它利用成熟的 Linux DAC 机制，以极低的性能开销实现了应用间的数据隔离。
 
 然而，随着系统复杂度的增加，单纯依靠 UID 已经不足以应对现代安全挑战。这也是为什么 Android 后来引入了 **SELinux (MAC)** 和 **Scoped Storage** 的原因——它们将在后续章节中详细讨论。
-
-## 思考题
-- 为什么 `root` 用户可以无视 UID/GID 限制？在 Android 中如何限制 `root` 进程的权限？
-- 如果一个应用通过 `chmod 777` 修改了自己的私有目录权限，其他应用能访问吗？
 
 ## 延伸阅读
 - [Android Source: Permissions and UID](https://source.android.com/docs/security/app-sandbox)

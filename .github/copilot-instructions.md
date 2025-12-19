@@ -27,6 +27,8 @@ This repository is a personal security research blog built with **VitePress**. I
 ## Coding Conventions & Patterns
 - **Markdown**: Use standard Markdown. VitePress features like custom containers (`::: info`) are encouraged.
 - **No Horizontal Rules**: Do not use `---` horizontal rule separators in articles, as VitePress automatically adds them between sections or at the end, making manual ones redundant.
+- **Tone**: Maintain a direct, technical, and objective tone. Avoid "book-like" or overly dramatic phrasing (e.g., "揭开...神秘面纱", "带你走进...的世界").
+- **No "Thinking Questions"**: Do not use a "Thinking Questions" (思考题) section. Instead, directly provide a "Background/Analysis/Result" (背景/分析/结果) style deep dive to explain edge cases or complex concepts.
 - **Sidebar**: Maintain the hierarchical structure in `docs/.vitepress/config.ts`. Use `collapsed: false` for active sections.
 - **Links Page**: `docs/links/index.md` uses a custom HTML structure for the friends list. Follow the `<div class="friend-item">` pattern when adding new links.
 - **Internal Links**: Use root-relative links (e.g., `/notes/android/android-evolution`) for internal navigation.
