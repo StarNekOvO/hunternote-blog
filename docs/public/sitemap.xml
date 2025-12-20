@@ -15,302 +15,302 @@
   </url>
   <url>
     <loc>https://starneko.com/notes/android/</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://starneko.com/notes/android/00-foundation/00-environment-setup</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/notes/android/00-foundation/01-architecture-overview</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/notes/android/01-sandbox/</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/01-sandbox/01-uid-gid-isolation</loc>
-    <lastmod>2025-12-19</lastmod>
+    <loc>https://starneko.com/notes/android/01-sandbox/00-uid-gid-isolation</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/01-sandbox/02-zygote-process</loc>
-    <lastmod>2025-12-19</lastmod>
+    <loc>https://starneko.com/notes/android/01-sandbox/01-zygote-process</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/01-sandbox/03-permission-model</loc>
-    <lastmod>2025-12-19</lastmod>
+    <loc>https://starneko.com/notes/android/01-sandbox/02-permission-model</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/01-sandbox/04-storage-isolation</loc>
-    <lastmod>2025-12-19</lastmod>
+    <loc>https://starneko.com/notes/android/01-sandbox/03-storage-isolation</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/01-sandbox/05-app-components</loc>
-    <lastmod>2025-12-19</lastmod>
+    <loc>https://starneko.com/notes/android/01-sandbox/04-app-components</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://starneko.com/notes/android/02-ipc/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/02-ipc/01-binder-deep-dive</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/02-ipc/00-binder-deep-dive</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/02-ipc/02-intent-system</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/02-ipc/01-intent-system</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/02-ipc/03-hidl-aidl</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/02-ipc/02-hidl-aidl</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/02-ipc/04-other-ipc</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/02-ipc/03-other-ipc</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://starneko.com/notes/android/READING_TIPS</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://starneko.com/notes/android/03-services/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/03-services/01-system-server</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/03-services/00-system-server</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/03-services/02-ams</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/03-services/01-ams</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/03-services/03-pms</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/03-services/02-pms</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/03-services/04-wms</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/03-services/03-wms</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/03-services/05-media-framework</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/03-services/04-media-framework</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://starneko.com/notes/android/04-native/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/04-native/01-bionic-libc</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/04-native/00-bionic-libc</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/04-native/02-linker</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/04-native/01-linker</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/04-native/03-seccomp</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/04-native/02-seccomp</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/04-native/04-art-runtime</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/04-native/03-art-runtime</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/04-native/05-native-daemons</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/04-native/04-native-daemons</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://starneko.com/notes/android/05-kernel/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/05-kernel/01-kernel-overview</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/05-kernel/00-kernel-overview</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/05-kernel/02-selinux</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/05-kernel/01-selinux</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/05-kernel/03-attack-surface</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/05-kernel/02-attack-surface</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/05-kernel/04-mitigations</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/05-kernel/03-mitigations</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/05-kernel/05-avf</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/05-kernel/04-avf</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/05-kernel/06-exploitation</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/05-kernel/05-exploitation</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://starneko.com/notes/android/06-hardware/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/06-hardware/01-trustzone</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/06-hardware/00-trustzone</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/06-hardware/02-arm-cca</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/06-hardware/01-arm-cca</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/06-hardware/03-avb</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/06-hardware/02-avb</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/06-hardware/04-keystore</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/06-hardware/03-keystore</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://starneko.com/notes/android/07-special/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/07-special/01-webview</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/07-special/00-webview</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/07-special/02-bluetooth</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/07-special/01-bluetooth</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/07-special/03-connectivity</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/07-special/02-connectivity</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://starneko.com/notes/android/08-practical/</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/08-practical/01-methodology</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/08-practical/00-methodology</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/08-practical/02-debugging</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/08-practical/01-debugging</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/08-practical/03-exploit-dev</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/08-practical/02-exploit-dev</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/08-practical/04-bug-bounty</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/08-practical/03-bug-bounty</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://starneko.com/notes/android/08-practical/05-cve-studies</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://starneko.com/notes/android/08-practical/04-cve-studies</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
