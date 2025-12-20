@@ -21,32 +21,7 @@ graph TD
 3.  **Seccomp**: 限制进程可调用的系统调用（Syscalls），收窄内核攻击面。
 4.  **Scoped Storage**: 针对存储空间的细粒度隔离，终结了“全盘读写 SD 卡”的混乱时代。
 
-## 2. 专题章节
-
-在本专题中，我们将深入拆解沙箱的每一个核心组件，并结合真实的 CVE 案例分析其攻防博弈：
-
-### [1x00 - UID/GID 隔离深度解析](./01-uid-gid-isolation.md)
-- **核心内容**: AID 分配机制、`installd` 源码分析、SharedUserId 的安全风险。
-- **安全案例**: CVE-2018-9468 (SharedUserId 时序竞态导致的签名绕过)。
-
-### [1x01 - Zygote 与进程创建](./02-zygote-process.md)
-- **核心内容**: 进程如何从 Zygote 孵化并"降权"进入沙箱，Capabilities 丢弃机制。
-- **安全案例**: CVE-2019-2025 (Capabilities 残留导致的特权保持)。
-
-### [1x02 - 权限模型演进](./03-permission-model.md)
-- **核心内容**: 从安装时权限到运行时权限，底层 GID 映射与 `platform.xml`。
-- **安全案例**: CVE-2021-0691 (PermissionController 预授权绕过)。
-
-### [1x03 - 存储隔离 (Scoped Storage)](./04-storage-isolation.md)
-- **核心内容**: 存储权限演进史，FUSE 视图隔离，MediaStore 与 SAF。
-- **安全案例**: CVE-2019-2219 (MediaProvider 路径遍历)、CVE-2020-0418 (FileProvider 符号链接)、CVE-2021-0478 (MediaStore SQL 注入)、CVE-2022-20006 (Download Provider TOCTOU)。
-- **实战技能**: FileProvider 配置审计、路径遍历 Fuzzing、Frida 监控文件访问。
-
-### [1x04 - 四大组件安全](./05-app-components.md)
-- **核心内容**: Activity/Service/Receiver/Provider 的边界安全与常见漏洞模式。
-- **安全案例**: CVE-2018-9581 (蓝牙配对广播的 PIN 码泄露)。
-
-## 3. 为什么沙箱会失效？
+## 2. 为什么沙箱会失效？
 
 尽管有如此严密的保护，沙箱依然可能被突破。常见的攻击路径包括：
 - **系统服务漏洞**: 利用 `system_server` 或其他高权限 Native Daemon 的内存破坏漏洞实现提权。

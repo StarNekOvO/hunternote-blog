@@ -432,13 +432,6 @@ static long device_ioctl(struct file *file,
 - 检测锁顺序错误
 - 预防死锁与竞态
 
-## 6. 关联阅读
-
-- [4x02 - seccomp-bpf](/notes/android/04-native/03-seccomp) - 限制可用syscall降低攻击面
-- [5x01 - SELinux](/notes/android/05-kernel/02-selinux) - 即使获得root也被SELinux限制
-- [5x03 - Kernel Mitigations](/notes/android/05-kernel/04-mitigations) - KASLR/CFI/PAN/PXN等缓解技术
-- [5x05 - Kernel Exploitation](/notes/android/05-kernel/06-exploitation) - 具体利用技术
-
 ## 参考资源
 
 ### AOSP官方

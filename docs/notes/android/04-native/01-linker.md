@@ -111,11 +111,6 @@ linker namespace 的目标是：限制进程能看到/能链接的 so 集合。
 - 查看进程映射：`adb shell cat /proc/<pid>/maps | grep '\.so'`
 - 查看动态链接错误日志：`adb logcat | grep -iE 'linker|dlopen|CANNOT LINK EXECUTABLE'`
 
-## 6. 关联阅读
-
-- `/notes/android/04-native/01-bionic-libc`
-- `/notes/android/04-native/03-seccomp`（进程能力收窄与 syscall 约束）
-
 ## 参考（AOSP）
 
 - https://source.android.com/docs/core/architecture — Android 系统架构总览（理解进程/分区/组件边界）

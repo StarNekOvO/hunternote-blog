@@ -390,6 +390,7 @@ addr2line -e libstagefright.so -f -C 0x000234a8
 5. **可利用性**：是否只是DoS？是否能构造有效RCE链？
 
 ## 7. 真实案例
+
 ### 7.1 重要CVE案例深入
 
 **CVE-2015-1538 (Stagefright)** - 改变Android安全格局的标志性漏洞

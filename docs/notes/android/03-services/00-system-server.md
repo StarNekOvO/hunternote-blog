@@ -108,12 +108,6 @@
 | CVE-2025-48535 | EoP/High | Settings 应用权限校验缺陷导致提权 | [ASB 2025-06](https://source.android.com/docs/security/bulletin/2025-06-01) |
 | CVE-2025-48554 | DoS/High | Framework 异常处理不当导致 system_server 崩溃 | [ASB 2025-06](https://source.android.com/docs/security/bulletin/2025-06-01) |
 
-## 6. 关联阅读
-
-- `/notes/android/01-sandbox/02-zygote-process`（Zygote 与 fork 模型）
-- `/notes/android/02-ipc/01-binder-deep-dive`（Binder 调用链与身份传递）
-- `/notes/android/03-services/02-ams`（进程/组件生命周期的核心入口）
-
 ## 参考（AOSP）
 
 - 架构概览（system services/system_server 的层级位置）：https://source.android.com/docs/core/architecture

@@ -128,11 +128,6 @@ void *code_buf = malloc(code_size);  // 分配过小
 2. classloader 来源路径是否可信，是否做完整性校验
 3. 是否存在“低权限输入驱动高权限执行”的代理路径（例如系统进程加载外部 dex）
 4. 编译/优化产物的落盘位置与权限是否可能被篡改
-## 7. 关联阅读
-
-- [4x01 - Linker](/notes/android/04-native/02-linker) - SO加载与沙箱逃逸
-- [1x04 - App Components](/notes/android/01-sandbox/05-app-components) - DEX动态加载的应用场景
-## 参考（AOSP）
 
 - https://source.android.com/docs/core/runtime — ART/Dalvik 总览（AOT/JIT/GC/调试特性与相关链接）
 - https://source.android.com/docs/core/runtime/dex-format — DEX 文件格式（字节码与解析面相关）

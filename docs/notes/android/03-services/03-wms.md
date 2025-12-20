@@ -83,11 +83,6 @@ WMS 负责管理屏幕上的所有窗口及其显示顺序。
 - `InputManager`
 - `SurfaceFlinger`
 
-## 6. 关联阅读
-
-- `/notes/android/03-services/02-ams`（任务栈与前后台状态对窗口的影响）
-- `/notes/android/04-native/03-seccomp`（SurfaceFlinger/多媒体进程的 syscall 限制）
-
 ## 参考（AOSP）
 
 - 架构概览（系统服务、SurfaceFlinger 等组件的层级位置）：https://source.android.com/docs/core/architecture

@@ -1,6 +1,6 @@
 # 0x01 - Android 架构演进：整体到模块化
 
-梳理 Android 从早期“整体式”到“解耦/模块化”的关键拐点（[ART](/notes/android/04-native/04-art-runtime)/[SELinux](/notes/android/05-kernel/02-selinux)、[Treble](/notes/android/02-ipc/03-hidl-aidl)、Mainline/APEX、[GKI](/notes/android/05-kernel/01-kernel-overview)），并结合典型漏洞事件说明：攻击面暴露 → 修复路径/分发机制 → 架构演进之间的关系。
+梳理 Android 从早期“整体式”到“解耦/模块化”的关键拐点（[ART](/notes/android/04-native/03-art-runtime)/[SELinux](/notes/android/05-kernel/01-selinux)、[Treble](/notes/android/02-ipc/02-hidl-aidl)、Mainline/APEX、[GKI](/notes/android/05-kernel/00-kernel-overview)），并结合典型漏洞事件说明：攻击面暴露 → 修复路径/分发机制 → 架构演进之间的关系。
 
 说明：本文面向安全研究做“机制与趋势”梳理。涉及模块化更新（Mainline/Google Play 系统更新）与某些新特性时，具体是否可用、是否由 Play 分发，依赖设备是否包含 GMS、厂商策略与 Android 版本；以对应版本的 AOSP 官方文档为准。
 
@@ -14,7 +14,7 @@
 
 ![Android 4 架构](/img/Android4.png)
 
-在 Android 4 至 Android 7 期间，系统呈现高度集成的"整体式"（Monolithic）结构。**这个阶段并非指某一个具体的 Android 版本，而是对 Android 8.0（[Treble](/notes/android/02-ipc/03-hidl-aidl)）之前，以整体耦合、更新困难为特征的系统架构的统称。**
+在 Android 4 至 Android 7 期间，系统呈现高度集成的"整体式"（Monolithic）结构。**这个阶段并非指某一个具体的 Android 版本，而是对 Android 8.0（[Treble](/notes/android/02-ipc/02-hidl-aidl)）之前，以整体耦合、更新困难为特征的系统架构的统称。**
 
 - **核心特征**：
     - **高度耦合**：Android 框架、HAL 实现、厂商驱动紧密耦合在一起，系统升级需要所有组件同步更新。
@@ -35,11 +35,11 @@
     - **应用层 (Application / Application Framework)**：开发者通过应用框架 API 与系统交互。
     - **系统运行库与核心库 (Libraries + Android Runtime)**：包含 Bionic C 库、各种媒体库以及 Dalvik 虚拟机，后者负责执行应用的 `dex` 字节码。
     - **硬件抽象层 (HAL)**：以 `.so` 动态库形式存在于 `/system` 分区，是厂商对硬件功能的具体实现，与 Android 框架紧密耦合。
-    - **Linux 内核 (Linux Kernel)**：提供最基础的驱动、进程管理、内存管理（如 Ashmem）和核心 IPC 机制（[Binder](/notes/android/02-ipc/01-binder-deep-dive)）。
+    - **Linux 内核 (Linux Kernel)**：提供最基础的驱动、进程管理、内存管理（如 Ashmem）和核心 IPC 机制（[Binder](/notes/android/02-ipc/00-binder-deep-dive)）。
 
 - **时代痛点**：
     - **强耦合与高昂的更新成本**：Android 框架的升级往往需要硬件厂商（Vendor）提供匹配的驱动和 HAL 实现，导致系统大版本更新缓慢且困难。
-    - **较弱的隔离机制**：虽然已有 [UID/GID 的权限模型](/notes/android/01-sandbox/01-uid-gid-isolation)，但 SELinux 在 Android 4.3 才被引入，且在 5.0 之前普遍处于"宽容模式"（Permissive），使得系统进程权限过于宽泛，漏洞利用后的横向移动相对容易（展开见 [SELinux on Android](/notes/android/05-kernel/02-selinux)）。
+    - **较弱的隔离机制**：虽然已有 [UID/GID 的权限模型](/notes/android/01-sandbox/00-uid-gid-isolation)，但 SELinux 在 Android 4.3 才被引入，且在 5.0 之前普遍处于"宽容模式"（Permissive），使得系统进程权限过于宽泛，漏洞利用后的横向移动相对容易（展开见 [SELinux on Android](/notes/android/05-kernel/01-selinux)）。
 
 - **代表性安全漏洞**
 
@@ -66,7 +66,7 @@
 | 2014 | **Towelroot** | `CVE-2014-3153` | Linux kernel（futex）本地提权漏洞，Root 工具常见引用。 | 进一步说明内核层漏洞的普遍性与危害，推动内核加固与更新机制优化。 |
 
 ### Android 6 (2015)：运行时权限与安全基线强化
-- **运行时权限模型**：这是 Android 历史上一个里程碑式的变革。应用在安装时不再被授予所有权限，而是在首次需要访问敏感资源（如相机、联系人）时，通过弹窗动态向用户申请（展开见 [Permission Model](/notes/android/01-sandbox/03-permission-model)）。这赋予了用户对数据访问的直接控制权。
+- **运行时权限模型**：这是 Android 历史上一个里程碑式的变革。应用在安装时不再被授予所有权限，而是在首次需要访问敏感资源（如相机、联系人）时，通过弹窗动态向用户申请（展开见 [Permission Model](/notes/android/01-sandbox/02-permission-model)）。这赋予了用户对数据访问的直接控制权。
 - **Doze 模式与 App Standby**：引入了先进的功耗管理机制。当设备静止且未充电时，系统会进入 Doze 模式，延迟后台任务和网络访问；App Standby 则会限制不常用应用的后台活动，两者共同显著提升了电池续航。
 - **强制全盘加密**：要求所有出厂搭载 Android 6.0 的新设备必须默认开启全盘加密（Full-Disk Encryption），为用户数据提供了强大的静态保护。
 - **原生指纹支持**：提供了统一的指纹认证 API，使开发者可以方便地在应用中集成安全、一致的指纹识别功能。
@@ -78,7 +78,7 @@
 | 2015 | **Stagefright** | `CVE-2015-1538` 等 | 媒体处理链路的一组严重漏洞，典型场景为彩信（MMS）触发远程代码执行（RCE）。 | 推动月度安全公告与补丁节奏常态化（Nexus 及部分厂商开始承诺按月发布补丁），缩短高危漏洞窗口期；成为加速组件模块化更新的重要推力。 |
 
 ### Android 7 (2016)：引入文件级加密与 JIT 编译器回归
-- **文件级加密 (File-Based Encryption, FBE)**：取代了全盘加密，成为新的加密标准。FBE 对不同文件使用不同密钥加密，部分密钥与用户的锁屏密码绑定（相关的数据访问边界与行为变化见 [Data Storage Isolation](/notes/android/01-sandbox/04-storage-isolation)）。
+- **文件级加密 (File-Based Encryption, FBE)**：取代了全盘加密，成为新的加密标准。FBE 对不同文件使用不同密钥加密，部分密钥与用户的锁屏密码绑定（相关的数据访问边界与行为变化见 [Data Storage Isolation](/notes/android/01-sandbox/03-storage-isolation)）。
 - **直接启动 (Direct Boot)**：基于 FBE，允许设备在用户输入密码前启动到一个受限模式。在该模式下，电话、闹钟等核心应用可以运行，而大部分用户数据仍处于加密状态，兼顾了便利性与安全性。
 - **JIT/AOT 混合编译**：在 ART 中重新引入了 JIT 编译器，并结合 AOT 预编译。系统通过分析应用的实际使用情况（Profile-guided compilation），对热点代码进行 JIT 编译和优化，实现了应用安装速度与运行性能的平衡。
 - **APK Signature Scheme v2**：引入了新的应用签名方案，通过保护 APK 的整个文件内容来防止恶意篡改，并显著加快了应用安装时的验证速度。
@@ -93,30 +93,30 @@
 
 ### Android 10 (2019)：Project Mainline - 模块化更新阶段
 
-- **变革核心：Google Play 系统更新 (APEX)**（模块化更新链路的一个典型例子：WebView，见 [WebView Security](/notes/android/07-special/01-webview)）
+- **变革核心：Google Play 系统更新 (APEX)**（模块化更新链路的一个典型例子：WebView，见 [WebView Security](/notes/android/07-special/00-webview)）
     - **变动原因**：即使有了 Treble，系统核心组件（如媒体框架、权限控制器）的更新仍依赖厂商。
     - **影响**：引入了 `.apex` 文件格式，使一部分系统组件具备“可独立更新”的形态；在包含 GMS 的设备上，通常由 Google Play 系统更新触达用户设备（AOSP 设备的分发路径则可能不同）。
 
 ### Android 11-12：GKI (Generic Kernel Image)
 
-- **变革核心：内核与驱动的分离**（展开见 [Android Kernel Overview](/notes/android/05-kernel/01-kernel-overview)）
+- **变革核心：内核与驱动的分离**（展开见 [Android Kernel Overview](/notes/android/05-kernel/00-kernel-overview)）
     - **变动原因**：Android 内核碎片化极其严重，每个芯片组都有数千个补丁。
     - **影响**：通过 GKI/KMI 等机制推进“通用内核 + 供应商模块”的边界，减少碎片化并改善补丁同步效率（具体落地与设备/SoC、版本相关）。
 
 ### Android 14-16 (2023-2025)：硬件辅助安全与虚拟化
 
 - **变革核心：AVF (Android Virtualization Framework) 与 MTE**
-    - **AVF**：引入 pKVM，将高敏感任务（如密钥管理、DRM）从主系统隔离到受保护的虚拟机中（展开见 [AVF](/notes/android/05-kernel/05-avf)）。
-    - **MTE (Memory Tagging Extension)**：硬件级内存安全检测，旨在从根源上终结 UAF 和 Buffer Overflow 等内存破坏漏洞（缓解/加固视角可对照 [Kernel Mitigations](/notes/android/05-kernel/04-mitigations)）。
+    - **AVF**：引入 pKVM，将高敏感任务（如密钥管理、DRM）从主系统隔离到受保护的虚拟机中（展开见 [AVF](/notes/android/05-kernel/04-avf)）。
+    - **MTE (Memory Tagging Extension)**：硬件级内存安全检测，旨在从根源上终结 UAF 和 Buffer Overflow 等内存破坏漏洞（缓解/加固视角可对照 [Kernel Mitigations](/notes/android/05-kernel/03-mitigations)）。
     - **ARM CCA/Realm（SoC/设备依赖）**：属于 ARM 平台能力，Android 对其支持与系统形态取决于具体设备与版本。
 
 ## 总结：攻击面的演进趋势
 
 从研究视角看，Android 的演进是一个**“收缩”**的过程：
 1.  **Framework 层**：由于 Mainline 的存在，逻辑漏洞（如 Janus）的生命周期被极大缩短。
-2.  **Native 层**：随着 [Scudo 分配器](/notes/android/04-native/01-bionic-libc)和 MTE 的普及，传统堆利用难度指数级上升。
+2.  **Native 层**：随着 [Scudo 分配器](/notes/android/04-native/00-bionic-libc)和 MTE 的普及，传统堆利用难度指数级上升。
 3.  **Kernel 层**：GKI 使得内核补丁同步变快，研究重心转向 GPU/NPU 等 Vendor 驱动。
-4.  **新战场**：虚拟化边界（pKVM）、硬件安全（[TEE](/notes/android/06-hardware/01-trustzone)/[Keystore](/notes/android/06-hardware/04-keystore)）以及 ART 虚拟机的复杂逻辑漏洞。
+4.  **新战场**：虚拟化边界（pKVM）、硬件安全（[TEE](/notes/android/06-hardware/00-trustzone)/[Keystore](/notes/android/06-hardware/03-keystore)）以及 ART 虚拟机的复杂逻辑漏洞。
 
 | 年份 | 漏洞名称 | CVE | 描述 | 对架构演进的影响 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -166,7 +166,7 @@
 经过上述一系列的演进，我们得到了“现代 Android 架构”。**这个概念并非指某一个具体的 Android 版本，而是对 Android 8.0 以来，由 Project Treble、Mainline 和 GKI 共同塑造的高度模块化、易于更新和强隔离性的系统架构的统称。**
 
 - **核心特征**：
-    - **边界固定**：通过 [Treble](/notes/android/02-ipc/03-hidl-aidl)/VINTF 明确了系统与供应商的边界。
+    - **边界固定**：通过 [Treble](/notes/android/02-ipc/02-hidl-aidl)/VINTF 明确了系统与供应商的边界。
     - **组件可更新**：通过 Mainline/APEX 实现了核心组件的独立、快速更新。
     - **强隔离**：通过强制化的 SELinux、组件化和严格的接口调用，实现了深度防御。
     - **多维版本矩阵**：理解一台设备的状态需要综合分析其平台版本、SPL、GKI 版本和 APEX 模块版本。
@@ -221,8 +221,8 @@
 
 ### Android 16 (2025)：平台侧安全/隐私强化
 
-- **Safer Intents（意图解析加固）**：针对 Intent redirection 等问题的多阶段加固；面向 targetSdk=16 的行为变化与可选严格模式（manifest opt-in）（展开见 [Intent System](/notes/android/02-ipc/02-intent-system)）。
-- **Keystore Key Sharing API**：新增跨 UID 的 Keystore key 授权/撤销与访问接口（面向需要安全共享密钥的场景）（相关能力与边界见 [Hardware-backed Keystore](/notes/android/06-hardware/04-keystore)）。
+- **Safer Intents（意图解析加固）**：针对 Intent redirection 等问题的多阶段加固；面向 targetSdk=16 的行为变化与可选严格模式（manifest opt-in）（展开见 [Intent System](/notes/android/02-ipc/01-intent-system)）。
+- **Keystore Key Sharing API**：新增跨 UID 的 Keystore key 授权/撤销与访问接口（面向需要安全共享密钥的场景）（相关能力与边界见 [Hardware-backed Keystore](/notes/android/06-hardware/03-keystore)）。
 - **Privacy Sandbox / SDK Runtime**：SDK 运行时隔离持续推进，第三方 SDK 与宿主 App 的数据边界更明确。
 - **MediaStore version lockdown**：`MediaStore#getVersion()` 对每个 app 返回独立版本标识，减少用于指纹识别的稳定属性。
 
@@ -232,7 +232,7 @@
 - 安全概览：https://source.android.com/docs/security
 - 应用沙盒（UID/DAC、SELinux 隔离演进、seccomp 描述）：https://source.android.com/docs/security/app-sandbox
 - SELinux（Treble 与 policy 兼容性背景）：https://source.android.com/docs/security/features/selinux
-- Verified Boot / AVB：https://source.android.com/docs/security/features/verifiedboot（站内梳理见 [Verified Boot](/notes/android/06-hardware/03-avb)）
+- Verified Boot / AVB：https://source.android.com/docs/security/features/verifiedboot（站内梳理见 [Verified Boot](/notes/android/06-hardware/02-avb)）
 - 兼容性与测试（CTS/VTS）：https://source.android.com/docs/compatibility
 
 - **代表性安全漏洞**

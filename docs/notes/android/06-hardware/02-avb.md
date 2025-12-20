@@ -104,10 +104,6 @@ OTA 与 AVB 是“更新可被信任”的两个侧面：OTA 负责把新版本�
 - 观察启动过程的 verity 相关日志（取决于可观测性）
 - 确认 system/vendor 分区是否启用 verity 与其错误处理策略
 
-## 8. 关联阅读
-
-- `/notes/android/06-hardware/04-keystore`（attestation 通常会把设备状态纳入证明链）
-
 ## 参考（AOSP）
 
 - https://source.android.com/docs/security/features/verifiedboot — 启动时验证总览：信任链、回滚保护与版本演进。

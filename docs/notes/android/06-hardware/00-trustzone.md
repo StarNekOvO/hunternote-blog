@@ -450,12 +450,6 @@ int ta_handle_command(uint32_t cmd_id,
 **价值下降**：
 - ❌ **已被移除的老旧TA** - 新设备不再使用
 
-## 8. 关联阅读
-
-- [6x02 - ARM CCA](/notes/android/06-hardware/02-arm-cca) - 下一代机密计算架构
-- [6x03 - Hardware Keystore](/notes/android/06-hardware/04-keystore) - TEE与密钥管理的集成
-- [5x04 - AVF](/notes/android/05-kernel/05-avf) - 虚拟化提供的另一种隔离方案
-
 ## 参考资源
 
 ### AOSP官方

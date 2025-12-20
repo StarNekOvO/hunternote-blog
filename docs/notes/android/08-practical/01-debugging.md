@@ -70,11 +70,6 @@
 - 增加观测点：日志 + dumpsys + 调用链插桩
 - 把输入最小化，逐步扩大变量
 
-## 4. 关联阅读
-
-- `/notes/android/08-practical/01-methodology`
-- `/notes/android/03-services/01-system-server`
-
 ## 参考（AOSP）
 - https://source.android.com/docs/setup/contribute/report-bugs — AOSP 对“可复现步骤 + 日志/证据”的官方要求与问题跟踪流程。
 - https://source.android.com/docs/security/features — 安全功能总览入口：用于对齐日志中常见的 SELinux/Verified Boot/Keystore 等概念。

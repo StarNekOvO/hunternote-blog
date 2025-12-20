@@ -622,12 +622,6 @@ int parse_external_message(uint8_t *data, size_t len) {
 - ❌ **Android Beam** - 已在Android 10移除
 - ❌ **旧协议** - WEP/WPA已被WPA2/WPA3替代
 
-## 6. 关联阅读
-
-- [7x01 - WebView Security](/notes/android/07-special/01-webview) - 另一个外部输入解析面
-- [7x02 - Bluetooth Security](/notes/android/07-special/02-bluetooth) - 类似的无线攻击面
-- [5x03 - Kernel Attack Surface](/notes/android/05-kernel/03-attack-surface) - 驱动层问题
-
 ## 参考资源
 
 ### AOSP官方

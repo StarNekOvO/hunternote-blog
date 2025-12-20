@@ -140,11 +140,6 @@ AMS 是 Android 的“总调度室”，负责管理所有组件的生命周期�
 - 再从"敏感能力"回溯：组件启动、跨用户、授予 URI 权限、前台切换
 - 最后落到具体写入点：任务记录、权限授予、进程管理决策
 
-## 7. 关联阅读
-
-- `/notes/android/02-ipc/01-binder-deep-dive`
-- `/notes/android/03-services/04-wms`（UI/输入/窗口协同）
-
 ## 参考（AOSP）
 
 - 架构概览（system_server/系统服务的总体定位）：https://source.android.com/docs/core/architecture

@@ -69,11 +69,6 @@ adbd 的风险不是“存在就危险”，而是“调试能力打开后，系
 - UDS/socket 路径权限与 context：`adb shell ls -lZ <path>`
 - 配合 `/notes/android/02-ipc/04-other-ipc` 的 UDS/属性检查清单
 
-## 5. 关联阅读
-
-- `/notes/android/04-native/03-seccomp`
-- `/notes/android/05-kernel/02-selinux`
-
 ## 参考（AOSP）
 
 - https://source.android.com/docs/security/features/selinux — init/守护进程的域划分、策略约束与审计入口

@@ -786,13 +786,6 @@ webView.loadDataWithBaseURL(
 - **运行时完整性检查**：检测Hook/调试/注入
 - **定期安全审计**：自动化扫描WebView配置
 
-## 6. 关联阅读
-
-- [2x01 - Intent System](/notes/android/02-ipc/02-intent-system) - Deep link/URI作为WebView输入通道
-- [4x02 - seccomp-bpf](/notes/android/04-native/03-seccomp) - 渲染进程沙箱的syscall过滤
-- [5x01 - SELinux](/notes/android/05-kernel/02-selinux) - isolated_app域对渲染进程的约束
-- [8x00 - Research Methodology](/notes/android/08-practical/01-methodology) - WebView漏洞挖掘方法论
-
 ## 参考资源
 
 ### AOSP官方文档

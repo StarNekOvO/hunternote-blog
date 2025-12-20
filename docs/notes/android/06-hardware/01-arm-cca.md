@@ -44,11 +44,6 @@ CCA 的落地依赖：
 
 因此同一 Android 版本在不同设备上的实际能力可能差异很大。
 
-## 5. 关联阅读
-
-- `/notes/android/05-kernel/05-avf`
-- `/notes/android/06-hardware/01-trustzone`
-
 ## 参考（AOSP）
 - https://source.android.com/docs/core/virtualization — AVF/pKVM/Microdroid 的官方入口（CCA/RME 属于底层硬件能力，AOSP 文档更多从 AVF 视角描述隔离形态）。
 - https://source.android.com/docs/security/features — Android 平台安全功能总览入口（用于把“硬件隔离能力”放到平台安全模型中对齐）。

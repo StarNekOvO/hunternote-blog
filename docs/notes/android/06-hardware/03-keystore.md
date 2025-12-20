@@ -72,11 +72,6 @@ attestation 往往依赖一条证书链来证明其来源可信。链路细节�
 3. 错误处理是否泄漏敏感状态信息
 4. attestation 结果是否被业务正确校验（证书链与关键字段）
 
-## 6. 关联阅读
-
-- `/notes/android/06-hardware/03-avb`
-- `/notes/android/06-hardware/01-trustzone`
-
 ## 参考（AOSP）
 - https://source.android.com/docs/security/features/keystore — Keystore/Keymaster/KeyMint 的架构与能力演进入口。
 - https://source.android.com/docs/security/features/keystore/attestation — 密钥认证（Key Attestation）与 ID 认证的字段语义与验证要点。

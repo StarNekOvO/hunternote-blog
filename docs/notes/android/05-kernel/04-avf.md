@@ -47,10 +47,6 @@ AVF 是 Android 13 引入的新特性，旨在提供比进程沙箱更强的隔�
 - 确认组件是否运行在 microdroid/VM 内
 - 观察 host 与 guest 两侧日志
 
-## 5. 关联阅读
-
-- `/notes/android/06-hardware/02-arm-cca`（CCA/RME 与更强隔离模型的关联）
-
 ## 参考（AOSP）
 - https://source.android.com/docs/core/virtualization — AVF 总览与关键组件术语（pKVM、Microdroid、VirtualizationService 等）。
 - https://source.android.com/docs/core/virtualization/whyavf — AVF 的需求背景与“为何需要比应用沙盒更强隔离”的动机说明。

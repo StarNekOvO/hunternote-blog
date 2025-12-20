@@ -68,11 +68,6 @@
 - 查看内核配置与启动参数（部分需要 root/工程环境）
 - 通过崩溃形态判断是否触发硬化检查（例如内存标记/完整性检查）
 
-## 5. 关联阅读
-
-- `/notes/android/04-native/03-seccomp`
-- `/notes/android/05-kernel/02-selinux`
-
 ## 参考（AOSP）
 - https://source.android.com/docs/security/overview/kernel-security — Android 内核安全总览：内核侧安全机制与加固方向的入口。
 - https://source.android.com/docs/security/features — 安全功能总览入口（SELinux、Verified Boot、Keystore 等），用于把缓解机制放在平台安全模型里理解。

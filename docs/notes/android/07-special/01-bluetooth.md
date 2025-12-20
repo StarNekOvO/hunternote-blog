@@ -413,12 +413,6 @@ class Connection {
 - 及时安装安全更新
 - 警惕未知设备的配对请求
 
-## 7. 关联阅读
-
-- [5x02 - Kernel Attack Surface](/notes/android/05-kernel/03-attack-surface) - 蓝牙驱动的内核攻击面
-- [4x02 - seccomp-bpf](/notes/android/04-native/03-seccomp) - 蓝牙进程的syscall过滤
-- [7x02 - Connectivity Security](/notes/android/07-special/03-connectivity) - 其他无线协议安全
-
 ## 参考（AOSP）
 
 - https://source.android.com/docs/core/connect - Android连接子系统总览（蓝牙/WiFi/NFC等）
