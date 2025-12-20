@@ -10,7 +10,7 @@
 
 ## 1. 软件缓解
 - **KASLR (Kernel Address Space Layout Randomization)**: 内核地址空间布局随机化。
-- **CFI (Control Flow Integrity)**: 控制流完整性，防止 ROP/JOP 攻击。
+- **CFI (Control Flow Integrity)**: 控制流完整性；在内核语境下常见实现是 clang kCFI，用于限制间接调用目标集合。
 - **SCS (Shadow Call Stack)**: 影子栈，保护函数返回地址。
 
 ### 1.1 KASLR
@@ -72,3 +72,7 @@
 
 - `/notes/android/04-native/03-seccomp`
 - `/notes/android/05-kernel/02-selinux`
+
+## 参考（AOSP）
+- https://source.android.com/docs/security/overview/kernel-security — Android 内核安全总览：内核侧安全机制与加固方向的入口。
+- https://source.android.com/docs/security/features — 安全功能总览入口（SELinux、Verified Boot、Keystore 等），用于把缓解机制放在平台安全模型里理解。

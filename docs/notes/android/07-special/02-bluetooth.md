@@ -49,3 +49,8 @@ Android 的蓝牙协议栈（Fluoride/Gabeldorsche）运行在 `com.android.blue
 ## 6. 关联阅读
 
 - `/notes/android/05-kernel/03-attack-surface`（驱动与协议栈接口同样属于攻击面）
+
+## 参考（AOSP）
+- https://source.android.com/docs/core/connect — Android 连接子系统总览入口（含蓝牙/NFC/Wi‑Fi 等）。
+- https://source.android.com/docs/core/ota/modular-system/bluetooth — 蓝牙 Mainline 模块说明（边界、APEX 形式、更新动机）。
+- https://source.android.com/docs/security/bulletin — 安全公告入口：用于追溯蓝牙相关漏洞的补丁时间线与版本影响范围。

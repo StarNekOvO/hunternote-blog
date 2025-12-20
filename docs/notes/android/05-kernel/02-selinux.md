@@ -23,7 +23,7 @@ SELinux 的目标不是“阻止一切 bug”，而是把 bug 的影响范围收
 
 ## 3. 安全审计
 - **Neverallow**: 策略中绝对禁止出现的规则，用于防止策略过于宽松。
-- **MLS (Multi-Level Security)**: 用于隔离不同用户的数据。
+- **MLS/MCS**: 通过安全级别/类别（Android 常见的是 MCS categories）来做额外隔离；具体落地依设备与厂商策略而定。
 
 ## 4. AVC Denial 排查方法
 
@@ -64,3 +64,7 @@ SELinux 的目标不是“阻止一切 bug”，而是把 bug 的影响范围收
 2. 高风险资源（设备节点、socket、属性）是否存在异常可达路径
 3. vendor 定制策略是否扩大了 privileged domain 的权限
 4. neverallow 是否被绕过（构建期检测与实际镜像一致性）
+
+## 参考（AOSP）
+- https://source.android.com/docs/security/features/selinux — Android SELinux 总览：模式、域、策略与与沙盒/版本演进的关系。
+- https://source.android.com/docs/security/app-sandbox — 应用沙盒的内核级隔离基础与 SELinux/seccomp 等纵深防御要点。

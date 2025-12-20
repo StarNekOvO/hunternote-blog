@@ -70,3 +70,8 @@ Bionic 是 Google 为 Android 开发的 C 标准库，旨在替代 GNU C Library
 2. 所有乘法/加法是否考虑溢出（分配大小计算）
 3. copy/format 类 API 是否存在“目标缓冲区大小未知”的使用方式
 4. 对象释放后是否仍被回调/异步路径引用（UAF 高发）
+
+## 参考（AOSP）
+
+- https://source.android.com/docs/core/architecture — 从 AOSP 官方的“软件栈分层”视角定位 native 库（含 libc/linker 所在层级）在系统中的位置
+- https://source.android.com/docs/core/architecture/vndk — 从 Treble 的 system/vendor 边界理解 `libc.so`/`libdl.so` 等作为 LL-NDK 的稳定性承诺，以及动态链接/依赖隔离（linker namespace）相关概念

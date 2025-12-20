@@ -61,3 +61,11 @@ Android 系统核心架构与底层运行机制分析，从 Userland 到 Kernel 
 - **8x03 - Bug Bounty Guide** ([08-practical/04-bug-bounty.md](08-practical/04-bug-bounty.md))
 - **8x04 - CVE Case Studies** ([08-practical/05-cve-studies.md](08-practical/05-cve-studies.md))
 
+## 参考（AOSP）
+
+- https://source.android.com/docs
+- https://source.android.com/docs/core/architecture
+- https://source.android.com/docs/security
+- https://source.android.com/docs/security/bulletin
+- https://source.android.com/docs/setup
+

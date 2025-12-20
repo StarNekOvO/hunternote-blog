@@ -76,3 +76,7 @@
 - 影响面说明（版本/设备范围）
 - 根因分析（关键代码路径与校验缺失点）
 - 修复建议与验证结果
+
+## 参考（AOSP）
+- https://source.android.com/docs/setup/contribute/report-bugs — AOSP 官方的报告/跟踪 bug 流程与写高质量复现信息的要求。
+- https://source.android.com/docs/security/bulletin — 安全公告入口：用于对齐“补丁时间线/受影响版本范围/修复验证”的权威来源。

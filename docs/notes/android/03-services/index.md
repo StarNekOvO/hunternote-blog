@@ -24,3 +24,10 @@
 
 ### [3x04 - Media Framework](./05-media-framework.md)
 - **核心内容**: 媒体解析服务的沙箱化、Stagefright 历史漏洞。
+
+## 参考（AOSP）
+
+- 架构概览（系统服务、system_server、原生守护进程层级）：https://source.android.com/docs/core/architecture
+- AIDL 概览（平台 IPC 抽象，对照 service/dumpsys）：https://source.android.com/docs/core/architecture/aidl
+- 应用签名（签名方案 v1/v2/v3/v4、shared UID 废弃口径）：https://source.android.com/docs/security/features/apksigning
+- 媒体（Stagefright/媒体模块/强化）：https://source.android.com/docs/core/media

@@ -23,3 +23,10 @@ Native 层是 Android 系统的基础，包括了 C 库、动态链接器、系�
 
 ### [4x04 - Native Daemons (init/prop)](./05-native-daemons.md)
 - **核心内容**: `init.rc` 审计、属性服务（Property Service）安全、`adbd` 风险。
+
+## 参考（AOSP）
+
+- https://source.android.com/docs/core — AOSP Core 主题总览（runtime/media/permissions/virtualization 等入口）
+- https://source.android.com/docs/core/architecture — Android 系统架构与关键组件概览
+- https://source.android.com/docs/core/runtime — ART/Dalvik 与运行时相关机制的总览入口
+- https://source.android.com/docs/core/architecture/vndk — system/vendor 边界、可链接库集合与相关术语（涉及 linker namespace）

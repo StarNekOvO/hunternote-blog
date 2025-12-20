@@ -60,7 +60,7 @@ if (fs_prepare_dir_strict(path, 0751, uid, gid) != 0) {
 ### 3.2 安全风险
 `sharedUserId` 极大地破坏了沙箱的隔离性。如果其中一个应用存在漏洞（如文件遍历），攻击者可以轻易获取另一个应用的所有敏感数据。
 
-**注意**：从 Android 10 开始，`sharedUserId` 已被弃用，Google 强烈建议使用 `ContentProvider` 或 `Service` 进行跨应用通信。
+**注意**：AOSP 官方口径是从 Android 13 起废弃“共用 UID”（Shared UID）。实际设备/应用是否还能使用，取决于目标版本与兼容性策略；跨应用共享能力更推荐使用 `ContentProvider`/`Service` 等显式 IPC 机制。
 
 ## 4. CVE 案例分析：CVE-2018-9468
 
@@ -109,3 +109,8 @@ UID/GID 隔离是 Android 沙箱的底层基石。它利用成熟的 Linux DAC �
 ## 延伸阅读
 - [Android Source: Permissions and UID](https://source.android.com/docs/security/app-sandbox)
 - [CVE-2018-9468 Detail](https://nvd.nist.gov/vuln/detail/CVE-2018-9468)
+
+## 参考（AOSP）
+
+- 应用沙盒（UID 隔离与演进、共享文件建议等）：https://source.android.com/docs/security/app-sandbox
+- SELinux（作为应用沙盒的纵深防御组成）：https://source.android.com/docs/security/features/selinux

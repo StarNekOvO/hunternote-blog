@@ -2,6 +2,8 @@
 
 梳理 Android 从早期“整体式”到“解耦/模块化”的关键拐点（ART/SELinux、Treble、Mainline/APEX、GKI），并结合典型漏洞事件说明：攻击面暴露 → 修复路径/分发机制 → 架构演进之间的关系。
 
+说明：本文面向安全研究做“机制与趋势”梳理。涉及模块化更新（Mainline/Google Play 系统更新）与某些新特性时，具体是否可用、是否由 Play 分发，依赖设备是否包含 GMS、厂商策略与 Android 版本；以对应版本的 AOSP 官方文档为准。
+
 影响（研究与排障视角）：
 
 - **补丁分发链路变化**：厂商 OTA → 月度安全公告/补丁节奏 →（部分组件）Google Play 系统更新
@@ -93,20 +95,20 @@
 
 - **变革核心：Google Play 系统更新 (APEX)**
     - **变动原因**：即使有了 Treble，系统核心组件（如媒体框架、权限控制器）的更新仍依赖厂商。
-    - **影响**：引入了 `.apex` 文件格式，允许 Google 直接通过 Google Play 更新系统的核心组件（如 `com.android.runtime`、`com.android.media`）。这标志着 Google 彻底收回了关键安全组件的控制权。
+    - **影响**：引入了 `.apex` 文件格式，使一部分系统组件具备“可独立更新”的形态；在包含 GMS 的设备上，通常由 Google Play 系统更新触达用户设备（AOSP 设备的分发路径则可能不同）。
 
-### Android 12 (2021)：GKI (Generic Kernel Image)
+### Android 11-12：GKI (Generic Kernel Image)
 
 - **变革核心：内核与驱动的分离**
     - **变动原因**：Android 内核碎片化极其严重，每个芯片组都有数千个补丁。
-    - **影响**：Google 强制要求使用统一的 GKI 内核，厂商驱动通过内核模块（LKM）加载。这使得内核漏洞的修复可以像应用更新一样快速分发。
+    - **影响**：通过 GKI/KMI 等机制推进“通用内核 + 供应商模块”的边界，减少碎片化并改善补丁同步效率（具体落地与设备/SoC、版本相关）。
 
 ### Android 14-16 (2023-2025)：硬件辅助安全与虚拟化
 
 - **变革核心：AVF (Android Virtualization Framework) 与 MTE**
     - **AVF**：引入 pKVM，将高敏感任务（如密钥管理、DRM）从主系统隔离到受保护的虚拟机中。
     - **MTE (Memory Tagging Extension)**：硬件级内存安全检测，旨在从根源上终结 UAF 和 Buffer Overflow 等内存破坏漏洞。
-    - **ARM CCA (Android 16)**：引入 Realm 隔离，硬件强制的应用沙箱。
+    - **ARM CCA/Realm（SoC/设备依赖）**：属于 ARM 平台能力，Android 对其支持与系统形态取决于具体设备与版本。
 
 ## 总结：攻击面的演进趋势
 
@@ -222,6 +224,15 @@
 - **Keystore Key Sharing API**：新增跨 UID 的 Keystore key 授权/撤销与访问接口（面向需要安全共享密钥的场景）。
 - **Privacy Sandbox / SDK Runtime**：SDK 运行时隔离持续推进，第三方 SDK 与宿主 App 的数据边界更明确。
 - **MediaStore version lockdown**：`MediaStore#getVersion()` 对每个 app 返回独立版本标识，减少用于指纹识别的稳定属性。
+
+## 参考（AOSP）
+
+- 架构概览：https://source.android.com/docs/core/architecture
+- 安全概览：https://source.android.com/docs/security
+- 应用沙盒（UID/DAC、SELinux 隔离演进、seccomp 描述）：https://source.android.com/docs/security/app-sandbox
+- SELinux（Treble 与 policy 兼容性背景）：https://source.android.com/docs/security/features/selinux
+- Verified Boot / AVB：https://source.android.com/docs/security/features/verifiedboot
+- 兼容性与测试（CTS/VTS）：https://source.android.com/docs/compatibility
 
 - **代表性安全漏洞**
 

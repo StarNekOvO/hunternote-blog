@@ -50,3 +50,10 @@ Linux Capabilities 将 root 权限细分为多个子项（如 `CAP_NET_RAW`, `CA
 
 - **影响**: 攻击者可以诱导用户在看似合法的应用界面中输入凭据，而实际该界面属于恶意进程。
 - **防御**: Google 通过加强 `ActivityStack` 的状态校验和限制跨 UID 的任务重组修复了此问题。
+
+## 参考（AOSP）
+
+- 应用沙盒（UID 隔离、SELinux 沙盒与 seccomp 相关演进）：https://source.android.com/docs/security/app-sandbox
+- SELinux（enforcing/permissive、domain 概念）：https://source.android.com/docs/security/features/selinux
+- 架构概览（system_server/系统服务/运行时层级位置）：https://source.android.com/docs/core/architecture
+- Zygote（进程孵化、WebView Zygote/USAP 等现代行为）：https://source.android.com/docs/core/runtime/zygote

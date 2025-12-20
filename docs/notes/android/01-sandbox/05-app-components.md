@@ -141,3 +141,8 @@ ContentProvider 是共享数据的核心。常见配置链路是：
 ## 8. CVE 案例（典型类型）
 
 - **CVE-2018-9581**：Broadcast 信息泄露。系统广播包含敏感信息且缺少权限保护，导致第三方应用可监听。
+
+## 参考（AOSP）
+
+- 应用沙盒（共享文件指南、Provider/SAF/MediaStore 相关安全建议入口）：https://source.android.com/docs/security/app-sandbox
+- 架构概览（系统服务/框架与应用边界）：https://source.android.com/docs/core/architecture

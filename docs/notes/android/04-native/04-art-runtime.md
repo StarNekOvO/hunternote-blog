@@ -1,6 +1,6 @@
 # 4x03 - Android Runtime (ART)
 
-ART 是 Android 上的 Java 虚拟机，取代了早期的 Dalvik。
+Android Runtime (ART) 是 Android 上应用（以及部分系统服务）使用的托管式运行时，取代了早期的 Dalvik。
 
 在安全研究里，ART 的位置很特殊：它既是“应用代码的执行引擎”，也是“大量复杂 native 代码”的集合。很多高危漏洞都出现在：
 
@@ -78,3 +78,10 @@ ART 是 Android 上的 Java 虚拟机，取代了早期的 Dalvik。
 2. classloader 来源路径是否可信，是否做完整性校验
 3. 是否存在“低权限输入驱动高权限执行”的代理路径（例如系统进程加载外部 dex）
 4. 编译/优化产物的落盘位置与权限是否可能被篡改
+
+## 参考（AOSP）
+
+- https://source.android.com/docs/core/runtime — ART/Dalvik 总览（AOT/JIT/GC/调试特性与相关链接）
+- https://source.android.com/docs/core/runtime/dex-format — DEX 文件格式（字节码与解析面相关）
+- https://source.android.com/docs/core/runtime/jit-compiler — ART JIT 编译器实现与关键机制
+- https://source.android.com/docs/core/runtime/art-ti — ART TI（运行时插桩/调试接口，研究与可观测性相关）

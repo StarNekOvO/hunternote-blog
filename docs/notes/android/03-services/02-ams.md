@@ -98,3 +98,8 @@ AMS 是 Android 的“总调度室”，负责管理所有组件的生命周期�
 
 - `/notes/android/02-ipc/01-binder-deep-dive`
 - `/notes/android/03-services/04-wms`（UI/输入/窗口协同）
+
+## 参考（AOSP）
+
+- 架构概览（system_server/系统服务的总体定位）：https://source.android.com/docs/core/architecture
+- AIDL 概览（跨进程交互的官方入口与调试命令）：https://source.android.com/docs/core/architecture/aidl

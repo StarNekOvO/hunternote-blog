@@ -16,3 +16,7 @@
 
 ### [8x04 - CVE Case Studies](./05-cve-studies.md)
 - **核心内容**: 经典漏洞复现与深度拆解。
+
+## 参考（AOSP）
+- https://source.android.com/docs/setup/contribute/report-bugs — AOSP 问题跟踪/提交流程入口。
+- https://source.android.com/docs/security/bulletin — Android 安全公告入口。

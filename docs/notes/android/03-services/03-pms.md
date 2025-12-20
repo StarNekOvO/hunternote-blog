@@ -106,3 +106,9 @@ Android 12 起，若组件声明 `intent-filter` 但未显式声明 `android:exp
 
 - `/notes/android/03-services/02-ams`（组件启动与进程管理侧的校验）
 - `/notes/android/05-kernel/02-selinux`（包安装后的域与访问控制）
+
+## 参考（AOSP）
+
+- 应用签名（v1/v2/v3/v4、shared UID 废弃口径）：https://source.android.com/docs/security/features/apksigning
+- 应用沙盒（签名与 UID/沙盒边界的关系背景）：https://source.android.com/docs/security/app-sandbox
+- 架构概览（系统服务与框架层级）：https://source.android.com/docs/core/architecture

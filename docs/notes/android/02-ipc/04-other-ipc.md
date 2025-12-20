@@ -80,3 +80,8 @@ Android 的属性系统也是一种“跨进程状态传递”机制。
 
 5. **资源限制**：是否限制消息大小、频率、连接数（防 DoS）
 6. **可信边界**：是否把“本地 socket/共享内存”误当成天然可信输入
+
+## 参考（AOSP）
+
+- SELinux（socket/file/type 的策略约束背景，适合对照 connectto/allow 的语义）：https://source.android.com/docs/security/features/selinux
+- 架构概览（原生守护进程与系统服务定位）：https://source.android.com/docs/core/architecture

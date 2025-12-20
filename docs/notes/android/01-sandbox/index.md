@@ -57,3 +57,10 @@ graph TD
 ## 延伸阅读
 - [0x01 - Android 架构演进](../00-foundation/01-architecture-overview.md)
 - [Android 官方文档：应用沙箱](https://source.android.com/docs/security/app-sandbox)
+
+## 参考（AOSP）
+
+- 应用沙盒：https://source.android.com/docs/security/app-sandbox
+- SELinux（强制访问控制与应用隔离演进背景）：https://source.android.com/docs/security/features/selinux
+- Zygote（进程孵化、USAP 池等现代行为）：https://source.android.com/docs/core/runtime/zygote
+- Android 运行时与 Dalvik/ART：https://source.android.com/docs/core/runtime

@@ -88,3 +88,9 @@
 
 - `/notes/android/04-native/03-seccomp`（媒体进程常见的 syscall 收窄手段）
 - `/notes/android/05-kernel/03-attack-surface`（多媒体驱动与 ioctl 也是常见攻击面）
+
+## 参考（AOSP）
+
+- 媒体（Stagefright/媒体架构与组件说明）：https://source.android.com/docs/core/media
+- 媒体框架强化：https://source.android.com/docs/core/media/framework-hardening
+- 月度安全公告（媒体高危漏洞常在此披露与修复）：https://source.android.com/docs/security/bulletin

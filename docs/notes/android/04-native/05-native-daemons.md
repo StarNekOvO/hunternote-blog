@@ -73,3 +73,9 @@ adbd 的风险不是“存在就危险”，而是“调试能力打开后，系
 
 - `/notes/android/04-native/03-seccomp`
 - `/notes/android/05-kernel/02-selinux`
+
+## 参考（AOSP）
+
+- https://source.android.com/docs/security/features/selinux — init/守护进程的域划分、策略约束与审计入口
+- https://source.android.com/docs/core/architecture/partitions — system/vendor/odm 等分区职责与文件落点（定位 rc/可执行文件常用）
+- https://source.android.com/docs/core/architecture/bootloader — 启动链路与 Verified Boot 关联点（影响调试能力与回滚面）

@@ -9,7 +9,7 @@ WebView 的复杂性来自三重叠加：
 - 混合安全边界（同一应用进程、渲染进程、系统服务协同）
 
 ## 1. 架构隔离
-- **渲染进程**: 运行在独立的沙箱进程中，受到严格的 seccomp 限制。
+- **渲染进程**: 通常运行在独立的沙箱进程中，并受到 SELinux/seccomp 等机制约束（具体策略取决于系统版本与 WebView Provider 实现）。
 - **Site Isolation**: 防止不同域名的网页共享同一个进程。
 
 补充：WebView 采用多进程架构后，很多漏洞的影响会被限制在渲染进程，但“桥接面”仍然可能把低权限的网页输入带回到高权限的应用逻辑。
@@ -65,3 +65,10 @@ WebView 的复杂性来自三重叠加：
 
 - `/notes/android/02-ipc/02-intent-system`（deep link/URI 作为输入通道）
 - `/notes/android/04-native/03-seccomp`（渲染进程沙箱的 syscall 收窄）
+
+## 参考（AOSP）
+
+- https://source.android.com/docs/core/ota/modular-system/webview — WebView 模块：通过 Mainline 机制进行独立更新的说明。
+- https://source.android.com/docs/security/app-sandbox — 应用沙盒与纵深防御入口（SELinux/seccomp 等），用于对齐“多进程隔离 + 内核边界收窄”的官方口径。
+- https://source.android.com/docs/core/ota/modular-system — Mainline 机制入口：理解系统组件如何在常规发布周期外分发安全修复（AOSP vs GMS 签名差异也在此页有说明）。
+- https://source.android.com/docs/security/bulletin — 安全公告入口：用于把 WebView/浏览器类风险放到补丁分发与版本范围里对齐。

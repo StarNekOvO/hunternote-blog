@@ -23,3 +23,7 @@ Android 内核基于 Linux，但增加了许多特有的驱动（如 Binder, Ash
 
 ### [5x05 - Kernel Exploitation Techniques](./06-exploitation.md)
 - **核心内容**: 内核提权实战、数据流攻击思路。
+
+## 参考（AOSP）
+- https://source.android.com/docs/core/architecture/kernel — Android 内核/ACK/GKI 的官方入口。
+- https://source.android.com/docs/security/overview/kernel-security — Android 内核安全总览入口。

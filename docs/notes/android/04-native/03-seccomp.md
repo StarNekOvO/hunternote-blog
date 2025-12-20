@@ -79,3 +79,8 @@ seccomp 往往与以下机制组合出现：
 - 权限拆分与进程拆分（把高风险逻辑放入低权限进程）
 
 综合看待能更准确判断：某个漏洞是否能从“崩溃”升级为“可控利用”。
+
+## 参考（AOSP）
+
+- https://source.android.com/docs/security/app-sandbox — 应用与进程隔离总体模型（与“收窄攻击面”的定位相关）
+- https://source.android.com/docs/security/features/selinux — 进程/资源强制访问控制（常与 seccomp 叠加使用）

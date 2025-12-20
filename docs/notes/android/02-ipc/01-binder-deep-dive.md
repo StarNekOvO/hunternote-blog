@@ -106,3 +106,9 @@ Binder 的安全性建立在驱动程序对发送方身份的**不可伪造性**
 3. `Parcel` 反序列化是否有长度/深度限制（防 DoS）
 4. 是否存在 `clearCallingIdentity()` 后使用 caller 可控参数做敏感写入
 5. 异步/回调是否可能重入导致状态机错误
+
+## 参考（AOSP）
+
+- AIDL 概览（说明 AIDL 基于 Binder 驱动、含 adb/service/dumpsys 交互入口）：https://source.android.com/docs/core/architecture/aidl
+- HIDL（说明 Android 10 起 HIDL 废弃、替换为 AIDL）：https://source.android.com/docs/core/architecture/hidl
+- HIDL Binder IPC（HIDL 侧对 Binder IPC 的专门说明）：https://source.android.com/docs/core/architecture/hidl/binder-ipc

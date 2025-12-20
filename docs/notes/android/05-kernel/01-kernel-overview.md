@@ -20,9 +20,11 @@ Android 内核虽然基于 Linux LTS (Long Term Support)，但为了适配移动
 - LMK 在 Android 上常与用户态守护进程（LMKD）协作，策略层与内核层共同影响进程生存。
 
 ## 2. GKI (Generic Kernel Image)
-从 Android 11 开始，Google 引入了 GKI 计划，旨在解决内核碎片化问题。
+从 Android 12 开始，Google 对发布时搭载 5.10+ 内核的新设备逐步落地并要求使用 GKI，以缓解内核碎片化问题。
 - **核心思想**: 将核心内核与供应商驱动（Vendor Modules）分离。
 - **安全意义**: Google 可以直接推送内核安全补丁，而无需等待 OEM 厂商适配。
+
+补充：实际能否“直接推补丁”取决于设备的 ACK/GKI/KMI 约束与厂商模块情况；研究/复现时仍需以目标设备的内核分支与补丁级别为准。
 
 ## 3. Android 内核的“分区化”现实
 
@@ -60,3 +62,9 @@ Android 内核虽然基于 Linux LTS (Long Term Support)，但为了适配移动
 2. 驱动 ioctl 是否对调用方进行能力/权限校验
 3. 用户态到内核态的数据结构拷贝是否严格检查长度与指针
 4. 竞态风险点：引用计数、生命周期、锁顺序
+
+## 参考（AOSP）
+
+- https://source.android.com/docs/core/architecture/kernel — AOSP 内核分层与术语（ACK/GKI/KMI）的官方入口，用于对齐“研究对象到底是哪一层”。
+- https://source.android.com/docs/core/architecture/kernel/generic-kernel-image — GKI 的目标、KMI 稳定性与版本要求，用于校对“GKI 能解决什么/不能解决什么”。
+- https://source.android.com/docs/security/overview/kernel-security — AOSP 从安全角度对内核攻击面与缓解方向的官方综述入口。

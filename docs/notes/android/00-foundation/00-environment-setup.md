@@ -89,6 +89,10 @@ m -j$(nproc)
 - **官方文档**：[source.android.com](https://source.android.com)
 - **安全公告**：[Android Security Bulletins](https://source.android.com/docs/security/bulletin)
 - **内核文档**：[source.android.com/docs/core/architecture/kernel](https://source.android.com/docs/core/architecture/kernel)
+- **构建概览**：[source.android.com/docs/setup/build](https://source.android.com/docs/setup/build)
+- **构建 Android**：[source.android.com/docs/setup/build/building](https://source.android.com/docs/setup/build/building)
+- **下载源码（repo sync）**：[source.android.com/source/downloading](https://source.android.com/source/downloading)
+- **构建要求**：[source.android.com/source/requirements](https://source.android.com/source/requirements)
 
 ## 5. 最小化联调工具（macOS 常用）
 

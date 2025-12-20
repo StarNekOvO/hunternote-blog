@@ -54,3 +54,8 @@
 
 - `/notes/android/06-hardware/01-trustzone`（支付/认证链路经常与 TEE 关联）
 - `/notes/android/06-hardware/04-keystore`
+
+## 参考（AOSP）
+- https://source.android.com/docs/core/connect — Android 连接子系统总览入口（覆盖 Wi‑Fi/NFC/电话等能力域）。
+- https://source.android.com/docs/core/ota/modular-system/wifi — Wi‑Fi 可更新模块的边界与组件说明（与设备/OEM 定制的交界处）。
+- https://source.android.com/docs/core/ota/modular-system/nfc-services — NFC 服务 Mainline 模块入口（组件边界与依赖项）。

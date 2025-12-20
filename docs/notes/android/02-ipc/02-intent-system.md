@@ -117,3 +117,10 @@ Intent 最终往往会被 AMS/ATMS/WMS 处理。
 虽然 StrandHogg 主要利用的是 Activity 栈管理机制，但其触发往往依赖于恶意的 Intent 注入。通过伪造任务栈，攻击者可以欺骗用户在恶意界面输入敏感信息。
 
 关联阅读：`/notes/android/03-services/02-ams` 与 `/notes/android/03-services/04-wms`。
+
+## 参考（AOSP）
+
+说明：AOSP 文档主要覆盖平台机制与安全模型；Intent/Deep Link 等应用侧细节通常在 Android 开发者文档更完整。这里给出与本章最相关、且位于 source.android.com 的对照入口。
+
+- 架构概览（AMS/系统服务在 AOSP 层级中的位置）：https://source.android.com/docs/core/architecture
+- 应用沙盒（共享文件/SAF、Intent 参与的存储访问路径在此页有概要描述）：https://source.android.com/docs/security/app-sandbox

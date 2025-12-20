@@ -13,3 +13,7 @@
 
 ### [6x03 - Hardware-backed Keystore](./04-keystore.md)
 - **核心内容**: Keymaster/KeyMint 实现、硬件级密钥保护。
+
+## 参考（AOSP）
+- https://source.android.com/docs/security/features — Android 安全功能总览入口（含 TEE/Keystore/Verified Boot）。
+- https://source.android.com/docs/security/features/verifiedboot — Verified Boot/AVB 的官方入口。

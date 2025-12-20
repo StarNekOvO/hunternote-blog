@@ -83,3 +83,9 @@ linker namespace 的目标是：限制进程能看到/能链接的 so 集合。
 
 - `/notes/android/04-native/01-bionic-libc`
 - `/notes/android/04-native/03-seccomp`（进程能力收窄与 syscall 约束）
+
+## 参考（AOSP）
+
+- https://source.android.com/docs/core/architecture — Android 系统架构总览（理解进程/分区/组件边界）
+- https://source.android.com/docs/core/architecture/vndk — VNDK/LL-NDK 与 system/vendor 的 ABI/库边界
+- https://source.android.com/docs/core/architecture/vndk/linker-namespace — linker namespace 机制（库可见性/搜索路径/隔离策略）

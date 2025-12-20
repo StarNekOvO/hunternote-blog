@@ -69,3 +69,8 @@ syscall 面通常通过：
 2. 关键 ioctl 是否做了调用方权限校验
 3. copy_from_user 参数长度是否有上界，是否存在整数溢出
 4. 并发路径是否存在引用计数/锁顺序问题
+
+## 参考（AOSP）
+- https://source.android.com/docs/core/architecture/kernel — Android 内核/ACK/GKI 的整体视角，便于把“攻击面”映射到实际内核与模块边界。
+- https://source.android.com/docs/security/overview/kernel-security — 内核侧安全机制与威胁模型概览（含 ACK/GKI、安全加固方向）。
+- https://source.android.com/docs/security/features/gpu-syscall-filtering — 以 GPU 驱动 IOCTL 为例的细粒度过滤与落地注意事项。

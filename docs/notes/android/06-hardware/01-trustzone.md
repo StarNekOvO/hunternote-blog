@@ -55,3 +55,9 @@ TEE 实现高度依赖 SoC 与厂商栈：
 
 - `/notes/android/06-hardware/04-keystore`
 - `/notes/android/05-kernel/05-avf`
+
+## 参考（AOSP）
+- https://source.android.com/docs/security/features/trusty — Trusty TEE：AOSP 的开源可信执行环境实现方案。
+- https://source.android.com/docs/security/features — 安全功能总览入口（含 Trusty TEE、Keystore、Verified Boot 等）。
+- https://source.android.com/docs/security/features/keystore — Keystore/Keymaster/KeyMint 与 TEE（TrustZone）在密钥保护中的位置。
+- https://source.android.com/docs/core/virtualization — AVF 作为“比应用沙盒更强隔离”的另一条路线（与传统 TEE 并存）。

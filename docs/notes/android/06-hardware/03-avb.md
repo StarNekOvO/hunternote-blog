@@ -1,6 +1,6 @@
 # 6x02 - Verified Boot (AVB)
 
-Android Verified Boot (AVB) 确保了从 Bootloader 到内核的每一行代码都是经过签名的。
+Android Verified Boot (AVB) 是 Android 启动时验证（Verified Boot）的参考实现，目标是在启动链路中尽力保证关键组件的完整性与真实性（具体强制程度取决于设备配置与 bootloader 锁状态）。
 
 AVB 的安全目标可以归纳为三点：
 
@@ -107,3 +107,8 @@ OTA 与 AVB 是“更新可被信任”的两个侧面：OTA 负责把新版本�
 ## 8. 关联阅读
 
 - `/notes/android/06-hardware/04-keystore`（attestation 通常会把设备状态纳入证明链）
+
+## 参考（AOSP）
+
+- https://source.android.com/docs/security/features/verifiedboot — 启动时验证总览：信任链、回滚保护与版本演进。
+- https://source.android.com/docs/security/features/verifiedboot/avb — AVB 参考实现入口：vbmeta、校验对象与实现视角。

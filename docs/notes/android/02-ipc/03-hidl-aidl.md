@@ -97,3 +97,10 @@ Stable AIDL 的关键词：
 
 - 选择可达接口（进程是否能调用它）
 - 搞清楚参数边界与对象生命周期（尤其是 buffer/handle/FD）
+
+## 参考（AOSP）
+
+- 架构概览（含 HAL 层级、Treble 总体介绍入口）：https://source.android.com/docs/core/architecture
+- HIDL（Android 10 起废弃，官方迁移口径）：https://source.android.com/docs/core/architecture/hidl
+- AIDL 概览：https://source.android.com/docs/core/architecture/aidl
+- 稳定的 AIDL（Stable AIDL）：https://source.android.com/docs/core/architecture/aidl/stable-aidl

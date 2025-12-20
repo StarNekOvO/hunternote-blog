@@ -74,3 +74,10 @@ runtime permissions:
 - **成因**: 在处理某些特定权限的自动授予逻辑时，系统未能正确校验请求方的包名与 UID 的对应关系。
 - **影响**: 攻击者可以构造一个虚假的包名，诱导系统为其授予本不该拥有的危险权限，从而实现隐私窃取。
 - **修复**: 强化了对调用方身份的二次校验，确保权限授予逻辑的原子性。
+
+## 参考（AOSP）
+
+- https://source.android.com/docs/core/permissions — Android 权限架构总览：权限类型、声明与检查机制。
+- https://source.android.com/docs/core/permissions/runtime_perms — 运行时权限：实现细节、UID 映射与权限组。
+- 应用沙盒（权限与 UID/DAC、SELinux、存储等保护机制的整体关系）：https://source.android.com/docs/security/app-sandbox
+- 架构概览（系统服务/框架层与系统 API 的层级关系）：https://source.android.com/docs/core/architecture

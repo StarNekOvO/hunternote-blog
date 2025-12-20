@@ -68,3 +68,9 @@ Android 的存储机制经历了一场从“公共广场”到“私人公寓”
 | **权限要求** | 需要 `READ/WRITE` 权限 | 访问媒体库需要权限，SAF 不需要 |
 | **底层挂载** | 通常是 sdcardfs | 强制使用 FUSE 视图隔离 |
 | **隐私保护** | 弱，应用可互相偷窥 | 强，默认完全隔离 |
+
+## 参考（AOSP）
+
+- https://source.android.com/docs/core/storage — Android 存储架构总览：传统存储与模拟存储。
+- https://source.android.com/docs/core/storage/scoped — 分区存储（Scoped Storage）：Android 10+ 的存储隔离机制。
+- 应用沙盒（Android 10+ 的已过滤存储空间视图、共享文件指南等）：https://source.android.com/docs/security/app-sandbox

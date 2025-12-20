@@ -184,3 +184,13 @@
 书中的“为什么”仍然有价值，但“怎么做”需要结合现代系统重新验证。
 
 重点差异：Dalvik→ART、无 SELinux→强制 SELinux、无 seccomp→强制 seccomp；这些变化会使早期书中的大量攻击路径不再成立。
+
+## 参考（AOSP）
+
+- 现代实现对照入口：https://source.android.com/docs
+- 架构概览：https://source.android.com/docs/core/architecture
+- 应用沙盒（含 UID/DAC、SELinux 隔离演进、seccomp 相关描述）：https://source.android.com/docs/security/app-sandbox
+- SELinux（含 enforcing/permissive、Treble 相关影响）：https://source.android.com/docs/security/features/selinux
+- Verified Boot / AVB：https://source.android.com/docs/security/features/verifiedboot
+- 月度安全公告（ASB）：https://source.android.com/docs/security/bulletin
+- 构建与版本生命周期：https://source.android.com/docs/setup/build

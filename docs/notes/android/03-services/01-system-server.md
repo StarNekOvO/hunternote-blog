@@ -95,3 +95,10 @@
 - `/notes/android/01-sandbox/02-zygote-process`（Zygote 与 fork 模型）
 - `/notes/android/02-ipc/01-binder-deep-dive`（Binder 调用链与身份传递）
 - `/notes/android/03-services/02-ams`（进程/组件生命周期的核心入口）
+
+## 参考（AOSP）
+
+- 架构概览（system services/system_server 的层级位置）：https://source.android.com/docs/core/architecture
+- Zygote（system_server 由 Zygote 孵化的官方说明入口）：https://source.android.com/docs/core/runtime/zygote
+- AIDL 概览（平台服务交互入口：service/dumpsys）：https://source.android.com/docs/core/architecture/aidl
+- SELinux（enforcing/permissive、domain 概念与调试）：https://source.android.com/docs/security/features/selinux

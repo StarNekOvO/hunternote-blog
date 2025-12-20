@@ -48,3 +48,7 @@
 - 与厂商沟通修复窗口
 - 在修复发布前避免公开可复现细节
 - 保留复现证据与版本信息用于后续确认
+
+## 参考（AOSP）
+- https://source.android.com/docs/setup/contribute/report-bugs — AOSP 官方问题提交流程（怎样写复现步骤/日志最有效）。
+- https://source.android.com/docs/security/bulletin — 安全公告入口：用于对齐披露窗口、补丁发布节奏与版本影响范围。

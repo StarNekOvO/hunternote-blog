@@ -25,3 +25,10 @@
 ### [2x03 - 其他 IPC 机制](./04-other-ipc.md)
 - **核心内容**: Unix Domain Sockets、匿名共享内存 (ashmem/memfd)、Pipes。
 - **CVE 案例**: Socket 权限配置不当导致的信息泄露。
+
+## 参考（AOSP）
+
+- 架构概览（系统服务/原生守护进程/库层级定位）：https://source.android.com/docs/core/architecture
+- AIDL 概览（平台 IPC 抽象，含 service/dumpsys 交互入口）：https://source.android.com/docs/core/architecture/aidl
+- HIDL（Android 10 起废弃、迁移到 AIDL 的官方口径）：https://source.android.com/docs/core/architecture/hidl
+- SELinux（IPC 接口的 allow/connectto 等策略约束背景）：https://source.android.com/docs/security/features/selinux
