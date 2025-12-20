@@ -98,15 +98,15 @@
 
 | CVE | 类型 | 简介 | 公告 |
 |-----|------|------|------|
-| CVE-2024-43080 | EoP/High | Framework 权限提升 | [ASB 2024-11](https://source.android.com/docs/security/bulletin/2024-11-01) |
-| CVE-2024-43081 | EoP/High | Framework 权限提升 | [ASB 2024-11](https://source.android.com/docs/security/bulletin/2024-11-01) |
-| CVE-2024-49733 | EoP/High | Framework 权限提升 | [ASB 2025-01](https://source.android.com/docs/security/bulletin/2025-01-01) |
-| CVE-2024-49744 | EoP/High | Framework 权限提升 | [ASB 2025-01](https://source.android.com/docs/security/bulletin/2025-01-01) |
+| CVE-2024-43080 | EoP/High | System 组件权限校验缺陷，本地提权无需额外权限 | [ASB 2024-11](https://source.android.com/docs/security/bulletin/2024-11-01) |
+| CVE-2024-43081 | EoP/High | Framework 层调用者身份校验不当导致提权 | [ASB 2024-11](https://source.android.com/docs/security/bulletin/2024-11-01) |
+| CVE-2024-49733 | ID/High | Framework 信息泄露，可能暴露敏感用户/应用数据 | [ASB 2025-01](https://source.android.com/docs/security/bulletin/2025-01-01) |
+| CVE-2024-49744 | EoP/High | Framework 权限校验绕过，本地提权 | [ASB 2025-01](https://source.android.com/docs/security/bulletin/2025-01-01) |
 | CVE-2025-22432 | EoP/High | System 组件输入验证不当，可执行任意代码 | [ASB 2025-04](https://source.android.com/docs/security/bulletin/2025-04-01) |
-| CVE-2025-26464 | EoP/High | AppSearch 权限提升 | [ASB 2025-06](https://source.android.com/docs/security/bulletin/2025-06-01) |
-| CVE-2025-32323 | EoP/High | DocumentsUI 权限提升 | [ASB 2025-06](https://source.android.com/docs/security/bulletin/2025-06-01) |
-| CVE-2025-48535 | EoP/High | Settings 权限提升 | [ASB 2025-06](https://source.android.com/docs/security/bulletin/2025-06-01) |
-| CVE-2025-48554 | DoS/High | Framework 拒绝服务 | [ASB 2025-06](https://source.android.com/docs/security/bulletin/2025-06-01) |
+| CVE-2025-26464 | EoP/High | AppSearch 服务权限校验缺陷，跨应用数据访问 | [ASB 2025-06](https://source.android.com/docs/security/bulletin/2025-06-01) |
+| CVE-2025-32323 | EoP/High | DocumentsUI 文件访问权限绕过 | [ASB 2025-06](https://source.android.com/docs/security/bulletin/2025-06-01) |
+| CVE-2025-48535 | EoP/High | Settings 应用权限校验缺陷导致提权 | [ASB 2025-06](https://source.android.com/docs/security/bulletin/2025-06-01) |
+| CVE-2025-48554 | DoS/High | Framework 异常处理不当导致 system_server 崩溃 | [ASB 2025-06](https://source.android.com/docs/security/bulletin/2025-06-01) |
 
 ## 6. 关联阅读
 

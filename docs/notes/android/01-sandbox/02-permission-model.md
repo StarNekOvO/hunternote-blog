@@ -140,11 +140,11 @@ Google 在 `PermissionController` 中添加了多层防护：
 
 | CVE | 类型 | 简介 | 公告 |
 |-----|------|------|------|
-| CVE-2024-43090 | ID/High | 信息泄露 | [ASB 2024-11](https://source.android.com/docs/security/bulletin/2024-11-01) |
-| CVE-2025-0076 | ID/High | Framework 信息泄露 | [ASB 2025-02](https://source.android.com/docs/security/bulletin/2025-02-01) |
-| CVE-2025-48545 | ID/High | Framework 信息泄露 | [ASB 2025-06](https://source.android.com/docs/security/bulletin/2025-06-01) |
+| CVE-2024-43090 | ID/High | 权限状态信息泄露，可探测其他应用的权限授予情况 | [ASB 2024-11](https://source.android.com/docs/security/bulletin/2024-11-01) |
+| CVE-2025-0076 | ID/High | Framework 层敏感数据泄露，可获取其他用户/应用的私有信息 | [ASB 2025-02](https://source.android.com/docs/security/bulletin/2025-02-01) |
+| CVE-2025-48545 | ID/High | Framework 信息泄露，跨用户数据访问 | [ASB 2025-06](https://source.android.com/docs/security/bulletin/2025-06-01) |
 
-> **注**：ID = Information Disclosure，通常可用于绕过 ASLR 或泄露敏感用户数据。
+> **注**：ID = Information Disclosure，常见利用场景包括：绕过 ASLR、探测应用安装状态、泄露用户隐私数据、为后续提权收集信息。
 
 ## 参考（AOSP）
 

@@ -14,20 +14,20 @@
 >
 > Canyie 是 Google Bug Hunters Android Program #4 的安全研究员，以下是她在系统服务层发现的部分漏洞：
 
-| CVE | 类型 | 模块 | 章节 |
+| CVE | 类型 | 模块 | 简介 |
 |-----|------|------|------|
-| **CVE-2024-0044** | EoP/High | PMS (packages.list) | [02-pms](/notes/android/03-services/02-pms) |
-| CVE-2024-43080 | EoP/High | Framework | [00-system-server](/notes/android/03-services/00-system-server) |
-| CVE-2024-43081 | EoP/High | Framework | [00-system-server](/notes/android/03-services/00-system-server) |
-| CVE-2024-49733 | EoP/High | Framework | [00-system-server](/notes/android/03-services/00-system-server) |
-| CVE-2024-49744 | EoP/High | Framework | [00-system-server](/notes/android/03-services/00-system-server) |
-| CVE-2025-22432 | EoP/High | System | [00-system-server](/notes/android/03-services/00-system-server) |
-| CVE-2025-26464 | EoP/High | AppSearch | [00-system-server](/notes/android/03-services/00-system-server) |
-| CVE-2025-32323 | EoP/High | DocumentsUI | [00-system-server](/notes/android/03-services/00-system-server) |
-| CVE-2025-48535 | EoP/High | Settings | [00-system-server](/notes/android/03-services/00-system-server) |
-| CVE-2025-48554 | DoS/High | Framework | [00-system-server](/notes/android/03-services/00-system-server) |
+| **CVE-2024-0044** | EoP/High | PMS | packages.list 注入 → run-as 任意应用提权 (**有完整 writeup**) |
+| CVE-2024-43080 | EoP/High | System | 权限校验缺陷，本地提权无需额外权限 |
+| CVE-2024-43081 | EoP/High | Framework | 调用者身份校验不当导致提权 |
+| CVE-2024-49733 | ID/High | Framework | 敏感用户/应用数据泄露 |
+| CVE-2024-49744 | EoP/High | Framework | 权限校验绕过，本地提权 |
+| CVE-2025-22432 | EoP/High | System | 输入验证不当，可执行任意代码 |
+| CVE-2025-26464 | EoP/High | AppSearch | 跨应用数据访问权限绕过 |
+| CVE-2025-32323 | EoP/High | DocumentsUI | 文件访问权限绕过 |
+| CVE-2025-48535 | EoP/High | Settings | 权限校验缺陷导致提权 |
+| CVE-2025-48554 | DoS/High | Framework | 异常处理不当导致 system_server 崩溃 |
 
-> **CVE-2024-0044** 有完整的 PoC 与技术分析，**强烈推荐深入学习**。
+> **CVE-2024-0044** 有完整的 PoC 与技术分析，详见 [02-pms](/notes/android/03-services/02-pms)。
 
 ## 参考（AOSP）
 
