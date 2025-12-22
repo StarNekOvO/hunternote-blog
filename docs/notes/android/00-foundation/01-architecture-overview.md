@@ -1,8 +1,8 @@
 # 0x01 - Android 架构演进：整体到模块化
 
-梳理 Android 从早期“整体式”到“解耦/模块化”的关键拐点（[ART](/notes/android/04-native/03-art-runtime)/[SELinux](/notes/android/05-kernel/01-selinux)、[Treble](/notes/android/02-ipc/02-hidl-aidl)、Mainline/APEX、[GKI](/notes/android/05-kernel/00-kernel-overview)），并结合典型漏洞事件说明：攻击面暴露 → 修复路径/分发机制 → 架构演进之间的关系。
+梳理 Android 从早期"整体式"到"解耦/模块化"的关键拐点（[ART](/notes/android/04-native/03-art-runtime)/[SELinux](/notes/android/05-kernel/01-selinux)、[Treble](/notes/android/02-ipc/02-hidl-aidl)、Mainline/APEX、[GKI](/notes/android/05-kernel/00-kernel-overview)），并结合典型漏洞事件说明：攻击面暴露 → 修复路径/分发机制 → 架构演进之间的关系。
 
-说明：本文面向安全研究做“机制与趋势”梳理。涉及模块化更新（Mainline/Google Play 系统更新）与某些新特性时，具体是否可用、是否由 Play 分发，依赖设备是否包含 GMS、厂商策略与 Android 版本；以对应版本的 AOSP 官方文档为准。
+说明：本文面向安全研究做"机制与趋势"梳理。涉及模块化更新（Mainline/Google Play 系统更新）与某些新特性时，具体是否可用、是否由 Play 分发，依赖设备是否包含 GMS、厂商策略与 Android 版本；以对应版本的 AOSP 官方文档为准。
 
 影响（研究与排障视角）：
 
@@ -90,37 +90,25 @@
 | 2016 | **Dirty COW** | `CVE-2016-5195` | Linux 内核内存子系统竞争条件漏洞，本地低权限提权（Android 受其影响）。 | 强化了"底层组件漏洞窗口期取决于补丁分发链路"的问题意识；与后续 Treble/GKI 等减少碎片化、提升可维护性的方向一致。 |
 | 2016 | **QuadRooter** | `CVE-2016-2503` / `2504` / `2059` / `5340` | 高通驱动链路的一组高危漏洞集合，典型利用为本地提权/持久化（依赖具体设备与补丁状态）。 | 暴露供应链（SoC/驱动）漏洞对生态的长尾影响；仅更新 framework 无法覆盖驱动修复，推动 system/vendor 边界与更新责任更清晰。 |
 | 2017 | **Janus** | `CVE-2017-13156` | APK 注入攻击：在不破坏 v1（JAR）签名的情况下向 APK 追加恶意 DEX；影响 Android 5.1.1–8.0。 | 促使生态加速迁移到 APK Signature Scheme v2/v3（v2 覆盖整包完整性；v3 引入 key rotation），并推动旧设备修复包管理校验逻辑。 |
-
-### Android 10 (2019)：Project Mainline - 模块化更新阶段
-
-- **变革核心：Google Play 系统更新 (APEX)**（模块化更新链路的一个典型例子：WebView，见 [WebView Security](/notes/android/07-special/00-webview)）
-    - **变动原因**：即使有了 Treble，系统核心组件（如媒体框架、权限控制器）的更新仍依赖厂商。
-    - **影响**：引入了 `.apex` 文件格式，使一部分系统组件具备“可独立更新”的形态；在包含 GMS 的设备上，通常由 Google Play 系统更新触达用户设备（AOSP 设备的分发路径则可能不同）。
-
-### Android 11-12：GKI (Generic Kernel Image)
-
-- **变革核心：内核与驱动的分离**（展开见 [Android Kernel Overview](/notes/android/05-kernel/00-kernel-overview)）
-    - **变动原因**：Android 内核碎片化极其严重，每个芯片组都有数千个补丁。
-    - **影响**：通过 GKI/KMI 等机制推进“通用内核 + 供应商模块”的边界，减少碎片化并改善补丁同步效率（具体落地与设备/SoC、版本相关）。
-
-### Android 14-16 (2023-2025)：硬件辅助安全与虚拟化
-
-- **变革核心：AVF (Android Virtualization Framework) 与 MTE**
-    - **AVF**：引入 pKVM，将高敏感任务（如密钥管理、DRM）从主系统隔离到受保护的虚拟机中（展开见 [AVF](/notes/android/05-kernel/04-avf)）。
-    - **MTE (Memory Tagging Extension)**：硬件级内存安全检测，旨在从根源上终结 UAF 和 Buffer Overflow 等内存破坏漏洞（缓解/加固视角可对照 [Kernel Mitigations](/notes/android/05-kernel/03-mitigations)）。
-    - **ARM CCA/Realm（SoC/设备依赖）**：属于 ARM 平台能力，Android 对其支持与系统形态取决于具体设备与版本。
-
-## 总结：攻击面的演进趋势
-
-从研究视角看，Android 的演进是一个**“收缩”**的过程：
-1.  **Framework 层**：由于 Mainline 的存在，逻辑漏洞（如 Janus）的生命周期被极大缩短。
-2.  **Native 层**：随着 [Scudo 分配器](/notes/android/04-native/00-bionic-libc)和 MTE 的普及，传统堆利用难度指数级上升。
-3.  **Kernel 层**：GKI 使得内核补丁同步变快，研究重心转向 GPU/NPU 等 Vendor 驱动。
-4.  **新战场**：虚拟化边界（pKVM）、硬件安全（[TEE](/notes/android/06-hardware/00-trustzone)/[Keystore](/notes/android/06-hardware/03-keystore)）以及 ART 虚拟机的复杂逻辑漏洞。
-
-| 年份 | 漏洞名称 | CVE | 描述 | 对架构演进的影响 |
-| :--- | :--- | :--- | :--- | :--- |
 | 2017 | **BlueBorne** | `CVE-2017-0781` 等 | 蓝牙协议栈零点击高危漏洞集合（多平台受影响），可在无需配对情况下触发远程攻击。 | 暴露无线协议栈的高频高危攻击面；推动"关键组件应更快可更新"的方向共识（后续部分组件进入 Mainline，但连接性组件的模块化范围随版本变化）。 |
+
+## 现代 Android 架构：模块化的 culmination
+
+![现代 Android 架构](/img/Android.webp)
+
+经过上述一系列的演进，我们得到了"现代 Android 架构"。**这个概念并非指某一个具体的 Android 版本，而是对 Android 8.0 以来，由 Project Treble、Mainline 和 GKI 共同塑造的高度模块化、易于更新和强隔离性的系统架构的统称。**
+
+- **核心特征**：
+    - **边界固定**：通过 [Treble](/notes/android/02-ipc/02-hidl-aidl)/VINTF 明确了系统与供应商的边界。
+    - **组件可更新**：通过 Mainline/APEX 实现了核心组件的独立、快速更新。
+    - **强隔离**：通过强制化的 SELinux、组件化和严格的接口调用，实现了深度防御。
+    - **多维版本矩阵**：理解一台设备的状态需要综合分析其平台版本、SPL、GKI 版本和 APEX 模块版本。
+
+### Android 8 (2017)：Project Treble - 架构解耦的里程碑
+
+- **变革核心：系统与供应商的解耦**
+    - **变动原因**：厂商适配新版 Android 需要修改大量与硬件相关的代码，导致更新缓慢、碎片化严重。
+    - **影响**：通过定义稳定的供应商接口（HIDL/VINTF），使得 Android 框架可以独立于 HAL 实现进行更新。这为后续的快速补丁分发和模块化更新奠定了基础（展开见 [HIDL 与 AIDL](/notes/android/02-ipc/02-hidl-aidl)）。
 
 ### Android 9 (2018)：强化隐私保护与硬件安全
 - **限制后台应用访问**：严格限制处于后台状态的应用访问摄像头、麦克风和传感器，防止用户在不知情的情况下被监听或追踪。
@@ -137,7 +125,7 @@
 
 ### Android 10 (2019)：Project Mainline - 核心组件模块化与 APEX
 
-- **变革核心：将关键系统组件打包成可独立更新的模块**
+- **变革核心：将关键系统组件打包成可独立更新的模块**（模块化更新链路的一个典型例子：WebView，见 [WebView Security](/notes/android/07-special/00-webview)）
     - **变动原因**：即使有了 Treble，一些关键的系统级安全漏洞仍需等待数月才能通过 OTA 推送到用户设备。Mainline 旨在通过 Google Play 商店直接更新这些核心组件。
     - **影响**：引入 APEX 文件格式，用于打包和分发底层系统组件。关键漏洞可以像更新应用一样被快速修复，极大地提升了安全响应速度。
 
@@ -151,25 +139,13 @@
 
 - **变革核心：推广通用内核映像 (Generic Kernel Image)**
     - **变动原因**：尽管 Treble 解耦了 HAL，但每个设备的 Linux 内核仍然高度定制化。GKI 旨在提供一个统一的内核基础，厂商只需开发特定于其硬件的模块。
-    - **影响**：将内核分为核心 GKI 部分和厂商模块，两者通过稳定的内核模块接口（KMI）交互，进一步简化了内核安全补丁的部署和更新。
+    - **影响**：将内核分为核心 GKI 部分和厂商模块，两者通过稳定的内核模块接口（KMI）交互，进一步简化了内核安全补丁的部署和更新（展开见 [Android Kernel Overview](/notes/android/05-kernel/00-kernel-overview)）。
 
 - **代表性安全漏洞**
 
 | 年份 | 漏洞名称 | CVE | 描述 | 对架构演进的影响 |
 | :--- | :--- | :--- | :--- | :--- |
 | 2020 | **BlueFrag** | `CVE-2020-0022` | 蓝牙协议栈远程代码执行漏洞，影响 Android 8.0/8.1/9/10。 | 说明无线协议栈漏洞窗口期依旧显著；该漏洞修复由 2020-02 安全补丁（SPL 2020-02-05）通过厂商 OTA 分发，未作为当月 Google Play 系统更新内容。 |
-
-## 现代 Android 架构：模块化的 culmination
-
-![现代 Android 架构](/img/Android.webp)
-
-经过上述一系列的演进，我们得到了“现代 Android 架构”。**这个概念并非指某一个具体的 Android 版本，而是对 Android 8.0 以来，由 Project Treble、Mainline 和 GKI 共同塑造的高度模块化、易于更新和强隔离性的系统架构的统称。**
-
-- **核心特征**：
-    - **边界固定**：通过 [Treble](/notes/android/02-ipc/02-hidl-aidl)/VINTF 明确了系统与供应商的边界。
-    - **组件可更新**：通过 Mainline/APEX 实现了核心组件的独立、快速更新。
-    - **强隔离**：通过强制化的 SELinux、组件化和严格的接口调用，实现了深度防御。
-    - **多维版本矩阵**：理解一台设备的状态需要综合分析其平台版本、SPL、GKI 版本和 APEX 模块版本。
 
 ### Android 12 (2021)：隐私控制与组件可更新范围扩展
 - **隐私仪表盘 (Privacy Dashboard)**：集中展示过去24小时内应用对位置、麦克风和相机的访问记录，提升透明度。
@@ -195,11 +171,13 @@
 | :--- | :--- | :--- | :--- | :--- |
 | 2022 | **Dirty Pipe** | `CVE-2022-0847` | Linux kernel 漏洞，影响 Android 12 等设备（以当期补丁为准）。 | 再次凸显内核层漏洞的长尾影响，推动 GKI 统一内核更新机制的持续优化与完善。 |
 
-### Android 14 (2023)：强化安全基线
+### Android 14 (2023)：强化安全基线与 AVF
 - **限制安装旧版应用**：为防止恶意软件利用旧版API漏洞，系统默认阻止安装面向过时 Android 版本（Android 5.1 及更早）的应用。
 - **更精细的数据共享控制**：当应用试图与第三方共享位置数据时，系统会弹出额外通知，让用户决定是否批准。
 - **凭据管理器 (Credential Manager)**：整合了多种认证方式，简化了登录流程，并为 Passkey 等现代认证标准提供原生支持。
 - **强制要求 64 位应用**：不再支持 32 位应用，全面转向 64 位，利用现代处理器的性能和安全优势。
+- **AVF (Android Virtualization Framework)**：引入 pKVM，将高敏感任务（如密钥管理、DRM）从主系统隔离到受保护的虚拟机中（展开见 [AVF](/notes/android/05-kernel/04-avf)）。
+- **MTE (Memory Tagging Extension)**：硬件级内存安全检测，旨在从根源上终结 UAF 和 Buffer Overflow 等内存破坏漏洞（缓解/加固视角可对照 [Kernel Mitigations](/notes/android/05-kernel/03-mitigations)）。
 
 - **代表性安全漏洞**
 
@@ -226,6 +204,20 @@
 - **Privacy Sandbox / SDK Runtime**：SDK 运行时隔离持续推进，第三方 SDK 与宿主 App 的数据边界更明确。
 - **MediaStore version lockdown**：`MediaStore#getVersion()` 对每个 app 返回独立版本标识，减少用于指纹识别的稳定属性。
 
+- **代表性安全漏洞**
+
+| 年份 | 漏洞名称 | CVE | 描述 | 对架构演进的影响 |
+| :--- | :--- | :--- | :--- | :--- |
+| 2025 | **Android System 高危** | `CVE-2025-26443` | 2025-06 ASB 高危案例（公开资料未见在野利用结论）。 | 持续推动 Mainline 模块化范围扩展，优化 Play 系统更新覆盖率与响应时效；验证现代架构下多维修复路径的成熟度。 |
+
+## 总结：攻击面的演进趋势
+
+从研究视角看，Android 的演进是一个**"收缩"**的过程：
+1.  **Framework 层**：由于 Mainline 的存在，逻辑漏洞（如 Janus）的生命周期被极大缩短。
+2.  **Native 层**：随着 [Scudo 分配器](/notes/android/04-native/00-bionic-libc)和 MTE 的普及，传统堆利用难度指数级上升。
+3.  **Kernel 层**：GKI 使得内核补丁同步变快，研究重心转向 GPU/NPU 等 Vendor 驱动。
+4.  **新战场**：虚拟化边界（pKVM）、硬件安全（[TEE](/notes/android/06-hardware/00-trustzone)/[Keystore](/notes/android/06-hardware/03-keystore)）以及 ART 虚拟机的复杂逻辑漏洞。
+
 ## 参考（AOSP）
 
 - 架构概览：https://source.android.com/docs/core/architecture
@@ -234,9 +226,3 @@
 - SELinux（Treble 与 policy 兼容性背景）：https://source.android.com/docs/security/features/selinux
 - Verified Boot / AVB：https://source.android.com/docs/security/features/verifiedboot（站内梳理见 [Verified Boot](/notes/android/06-hardware/02-avb)）
 - 兼容性与测试（CTS/VTS）：https://source.android.com/docs/compatibility
-
-- **代表性安全漏洞**
-
-| 年份 | 漏洞名称 | CVE | 描述 | 对架构演进的影响 |
-| :--- | :--- | :--- | :--- | :--- |
-| 2025 | **Android System 高危** | `CVE-2025-26443` | 2025-06 ASB 高危案例（公开资料未见在野利用结论）。 | 持续推动 Mainline 模块化范围扩展，优化 Play 系统更新覆盖率与响应时效；验证现代架构下多维修复路径的成熟度。 |
