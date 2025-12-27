@@ -208,7 +208,7 @@ export default defineConfig({
     // SEO meta tags
     ['meta', { name: 'keywords', content: 'starneko, StarNekOvO, starnekovo, 牛奶猫, security, CTF, pwn, writeup, Android security, kernel exploitation, 系统安全, 安全研究' }],
     ['meta', { name: 'author', content: 'StarNekOvO, starneko, starnekovo, 牛奶猫' }],
-    ['meta', { name: 'description', content: '牛奶猫的猎人笔记 - StarNekOvO (starneko) 的系统安全研究学习笔记与 Writeup。包含 CTF、PWN、Android 安全、内核利用等内容。' }],
+    ['meta', { name: 'description', content: '牛奶猫的猎人笔记 - StarNekOvO (starneko, starnekovo) 的系统安全研究学习笔记与 Writeup。包含 CTF、PWN、Android 安全、内核利用等内容。' }],
     
     // Other meta tags
     ['link', { rel: 'stylesheet', href: '/custom.css' }],
