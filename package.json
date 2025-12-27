@@ -7,10 +7,10 @@
     "build": "vitepress build docs",
     "preview": "vitepress preview docs"
   },
-  "keywords": ["security", "ctf", "pwn", "writeup", "vitepress", "starneko", "starnekovo", "牛奶猫", "StarNekOvO", "android security", "kernel exploitation"],
-  "author": "starneko (starnekovo, 牛奶猫)",
+  "keywords": ["security", "ctf", "pwn", "writeup", "vitepress", "starneko", "牛奶猫", "StarNekOvO", "android security", "kernel exploitation"],
+  "author": "starneko (牛奶猫)",
   "license": "CC-BY-NC-4.0",
-  "description": "牛奶猫的猎人笔记 - starneko (starnekovo) 的系统安全研究学习笔记与 Writeup",
+  "description": "牛奶猫的猎人笔记 - starneko 的系统安全研究学习笔记与 Writeup",
   "devDependencies": {
     "vitepress": "^1.6.4"
   }
