@@ -19,6 +19,5 @@
   "display": "standalone",
   "start_url": "/",
   "lang": "zh-CN",
-  "categories": ["security", "ctf", "education"],
-  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7"
+  "categories": ["security", "ctf", "education"]
 }
