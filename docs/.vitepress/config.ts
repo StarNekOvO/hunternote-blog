@@ -205,16 +205,63 @@ export default defineConfig({
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }],
     ['meta', { name: 'apple-mobile-web-app-title', content: '猎人笔记' }],
     
+    // SEO meta tags
+    ['meta', { name: 'keywords', content: 'starneko, 牛奶猫, StarNekOvO, security, CTF, pwn, writeup, Android security, kernel exploitation, 系统安全, 安全研究' }],
+    ['meta', { name: 'author', content: 'starneko, 牛奶猫' }],
+    ['meta', { name: 'description', content: '牛奶猫的猎人笔记 - starneko 的系统安全研究笔记与 Writeup。包含 CTF、PWN、Android 安全、内核利用等内容。' }],
+    
     // Other meta tags
     ['link', { rel: 'stylesheet', href: '/custom.css' }],
     ['link', { rel: 'sitemap', type: 'application/xml', href: '/sitemap.xml' }],
-    ['meta', { name: 'author', content: 'StarNekOvO' }],
-    ['meta', { property: 'og:title', content: '牛奶猫的猎人笔记' }],
-    ['meta', { property: 'og:type', content: 'blog' }],
+    ['link', { rel: 'canonical', href: 'https://starneko.com' }],
+    
+    // Open Graph meta tags
+    ['meta', { property: 'og:title', content: '牛奶猫的猎人笔记 - starneko' }],
+    ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:url', content: 'https://starneko.com' }],
-    ['meta', { property: 'og:image', content: '/img/MilkDollar.jpeg' }],
+    ['meta', { property: 'og:image', content: 'https://starneko.com/img/MilkDollar.jpeg' }],
     ['meta', { property: 'og:site_name', content: '牛奶猫的猎人笔记' }],
-    ['meta', { property: 'og:description', content: 'System Security Hunter. Freelancer. Python/Go/Rust. | MSCS at CU Boulder | maimaiDX ◂Ⓘ▸ ヨルシカ | INFJ' }],
+    ['meta', { property: 'og:description', content: 'starneko (牛奶猫) 的系统安全研究笔记 - System Security Hunter. Python/Go/Rust. MSCS at CU Boulder.' }],
+    
+    // Twitter Card meta tags
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:site', content: '@StarNekOvO' }],
+    ['meta', { name: 'twitter:creator', content: '@StarNekOvO' }],
+    ['meta', { name: 'twitter:title', content: '牛奶猫的猎人笔记 - starneko' }],
+    ['meta', { name: 'twitter:description', content: 'starneko (牛奶猫) 的系统安全研究笔记 - System Security Hunter' }],
+    ['meta', { name: 'twitter:image', content: 'https://starneko.com/img/MilkDollar.jpeg' }],
+    
+    // JSON-LD structured data for better SEO
+    ['script', { type: 'application/ld+json' }, JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'starneko',
+      alternateName: ['牛奶猫', 'StarNekOvO'],
+      url: 'https://starneko.com',
+      image: 'https://starneko.com/img/MilkDollar.jpeg',
+      sameAs: [
+        'https://github.com/StarNekOvO',
+        'https://x.com/StarNekOvO',
+        'https://t.me/StarNekOvO'
+      ],
+      jobTitle: 'Security Researcher',
+      description: 'System Security Hunter. Python/Go/Rust developer. MSCS at CU Boulder.',
+      knowsAbout: ['Security Research', 'CTF', 'PWN', 'Android Security', 'Kernel Exploitation']
+    })],
+    ['script', { type: 'application/ld+json' }, JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: '牛奶猫的猎人笔记',
+      alternateName: ['StarNekOvO Blog', 'starneko notes'],
+      url: 'https://starneko.com',
+      description: 'starneko (牛奶猫) 的系统安全研究笔记与 Writeup',
+      author: {
+        '@type': 'Person',
+        name: 'starneko',
+        alternateName: ['牛奶猫', 'StarNekOvO']
+      },
+      inLanguage: 'zh-CN'
+    })],
   ],
 
   themeConfig: {

@@ -1,7 +1,7 @@
 {
   "name": "牛奶猫的猎人笔记",
   "short_name": "猎人笔记",
-  "description": "StarNekOvO's Security Research Notes",
+  "description": "starneko (牛奶猫) 的系统安全研究笔记与 Writeup - CTF, PWN, Android Security",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -18,5 +18,6 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "start_url": "/",
-  "lang": "zh-CN"
+  "lang": "zh-CN",
+  "categories": ["security", "ctf", "education"]
 }
