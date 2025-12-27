@@ -3,11 +3,11 @@ layout: home
 
 hero:
   name: "牛奶猫的猎人笔记"
-  text: "StarNekOvO"
+  text: "starneko"
   tagline: "System Security Hunter. Python/Go/Rust.<br>MSCS at CU Boulder. Freelancer.<br>ヨルシカ ◂Ⓘ▸ maimaiDX"
   image:
     src: /img/MilkDollar.jpeg
-    alt: StarNekOvO
+    alt: starneko
   actions:
     - theme: brand
       text: Get Started
