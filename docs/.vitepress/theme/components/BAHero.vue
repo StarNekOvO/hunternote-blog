@@ -87,7 +87,7 @@ const props = withDefaults(defineProps<{
   name: 'MilkSU',
   alias: 'starneko',
   motto: 'System Security Hunter. Python/Go/Rust.\nMSCS at CU Boulder. Freelancer.\nヨルシカ ◂Ⓘ▸ maimaiDX',
-  avatar: '/img/m2.PNG',
+  avatar: '/img/miruku400.png',
   bgLight: '/img/banner-light.webp',
   bgDark: '/img/banner-dark.webp',
   primaryAction: () => ({ text: 'LINK START', link: '/notes/' }),

@@ -349,7 +349,7 @@ export default defineConfig({
     ['meta', { property: 'og:title', content: 'MilkSU Hunternote - milksu / starneko' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:url', content: 'https://milksu.org' }],
-    ['meta', { property: 'og:image', content: 'https://milksu.org/img/m2.PNG' }],
+    ['meta', { property: 'og:image', content: 'https://milksu.org/img/miruku400.png' }],
     ['meta', { property: 'og:site_name', content: 'MilkSU Hunternote' }],
     ['meta', { property: 'og:description', content: 'MilkSU 的系统安全研究笔记 - System Security Hunter. Python/Go/Rust. MSCS at CU Boulder.' }],
 
@@ -359,7 +359,7 @@ export default defineConfig({
     ['meta', { name: 'twitter:creator', content: '@MilkSU_Official' }],
     ['meta', { name: 'twitter:title', content: 'MilkSU Hunternote - milksu / starneko' }],
     ['meta', { name: 'twitter:description', content: 'MilkSU 的系统安全研究笔记 - System Security Hunter' }],
-    ['meta', { name: 'twitter:image', content: 'https://milksu.org/img/m2.PNG' }],
+    ['meta', { name: 'twitter:image', content: 'https://milksu.org/img/miruku400.png' }],
 
     // JSON-LD structured data for better SEO
     ['script', { type: 'application/ld+json' }, JSON.stringify({
@@ -368,7 +368,7 @@ export default defineConfig({
       name: 'milksu',
       alternateName: ['starneko', '牛奶猫', 'MilkSU'],
       url: 'https://milksu.org',
-      image: 'https://milksu.org/img/m2.PNG',
+      image: 'https://milksu.org/img/miruku400.png',
       sameAs: [
         'https://github.com/MilkSU-Official',
         'https://x.com/MilkSU_Official',
@@ -395,7 +395,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: '/img/m2.PNG',
+    logo: '/img/miruku400.png',
 
     nav: [
       { text: 'Home', link: '/' },
