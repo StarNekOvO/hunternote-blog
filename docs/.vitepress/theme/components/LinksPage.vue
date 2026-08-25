@@ -178,6 +178,12 @@ const friends = [
     link: 'https://www.one-among.us/profile/SevenBird',
     avatar: '/img/sevenbird.jpg',
     desc: 'R.I.P.'
+  },
+  {
+    name: 'CN059的技术博客',
+    link: 'https://blog.cn059.com/',
+    avatar: 'https://bu.dusays.com/2025/10/09/68e798c0a1dc6.jpg',
+    desc: 'CN059 的技术博客'
   }
 ]
 
